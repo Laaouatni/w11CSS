@@ -51,6 +51,7 @@ nav #nav-container {
 #first-container div img,
 #second-container div svg,
 #second-container div img {
+    aspect-ratio: 1;
     height: var(--img-nav-height);
     width: auto;
     border-radius: 0.1em;
@@ -62,7 +63,7 @@ nav #nav-container {
 
 #second-container {
     color: white;
-    margin: 1em;
+    margin-right: 0.5em;
 }
 
 #first-container div {
@@ -75,11 +76,11 @@ nav #nav-container {
     border-top: 1px solid rgba(255, 255, 255, 0.0);
 }
 
-#second-container div {
+#second-container div svg {
     aspect-ratio: 1;
     display: grid;
     place-content: center;
-    font-size: ;
+    transform: scale(0.7)
 }
 
 #first-container div:hover {
