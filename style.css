@@ -61,9 +61,33 @@ nav #nav-container {
     margin: auto;
 }
 
-#second-container {
+#second-container div {
     color: white;
     margin-right: 0.5em;
+    display: grid;
+    grid-auto-flow: column;
+}
+
+#second-container div div {
+    display: grid;
+    place-content: center;
+}
+
+#sistema-info {
+    height: 80%;
+    gap: 0.5em;
+    padding: 0 0.5em;
+    border-radius: 0.5em;
+    transition-duration: 0.5s;
+}
+
+#sistema-info:hover {
+    background-color: rgba(255, 255, 255, 0.075);
+    transition-duration: 0.5s;
+}
+
+#sistema-info div {
+    margin: auto;
 }
 
 #first-container div {
@@ -97,8 +121,4 @@ nav #nav-container {
 
 #first-container div:nth-child(2) svg {
     color: #eff7ff;
-}
-
-#second-container div:nth-child(1) {
-    color: white;
 }
