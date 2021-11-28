@@ -4,6 +4,7 @@
     --max-width: 100vw;
     --img-nav-height: calc(var(--nav-height) - 1.5rem);
     --w11-logo-gradient: linear-gradient(135deg, #6bd3ff, #0079d4);
+    font-family: poppins, monospace;
 }
 
 body {
@@ -47,6 +48,10 @@ nav #nav-container {
     justify-content: center;
 }
 
+#second-container {
+    gap: 0rem !important;
+}
+
 #first-container div svg,
 #first-container div img,
 #second-container div svg,
@@ -61,14 +66,7 @@ nav #nav-container {
     margin: auto;
 }
 
-#second-container div {
-    color: white;
-    margin-right: 0.5em;
-    display: grid;
-    grid-auto-flow: column;
-}
-
-#second-container div div {
+#second-container #sistema-info div {
     display: grid;
     place-content: center;
 }
@@ -79,9 +77,27 @@ nav #nav-container {
     padding: 0 0.5em;
     border-radius: 0.5em;
     transition-duration: 0.5s;
+    color: white;
+    margin-right: 0.5em;
+    display: grid;
+    grid-auto-flow: column;
 }
 
-#sistema-info:hover {
+#sistema-data {
+    height: 80%;
+    padding: 0 1em !important;
+    color: white;
+    margin-right: 0.5em;
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.6em;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#sistema-info:hover,
+#sistema-data:hover {
     background-color: rgba(255, 255, 255, 0.075);
     transition-duration: 0.5s;
 }
