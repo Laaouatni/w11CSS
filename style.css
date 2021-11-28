@@ -91,7 +91,7 @@ nav #nav-container {
     border-radius: 0.5em;
     display: flex;
     flex-direction: column;
-    font-size: 0.6em;
+    font-size: 0.65em;
     align-items: flex-end;
     justify-content: center;
 }
@@ -120,7 +120,7 @@ nav #nav-container {
     aspect-ratio: 1;
     display: grid;
     place-content: center;
-    transform: scale(0.7)
+    transform: scale(0.7);
 }
 
 #first-container div:hover {
