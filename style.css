@@ -30,24 +30,41 @@ nav {
     backdrop-filter: blur(5em);
 }
 
-#first-container div svg {
+nav #nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--nav-height);
+}
+
+#first-container,
+#second-container {
+    display: flex;
+    height: 100%;
+    width: auto;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#first-container div svg,
+#first-container div img,
+#second-container div svg,
+#second-container div img {
     aspect-ratio: 1;
     height: var(--img-nav-height);
     width: auto;
     border-radius: 0.1em;
 }
 
-nav #first-container {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    gap: 0.5rem;
+#first-container {
+    margin: auto;
 }
 
-#first-container div {
+#second-container {}
+
+#first-container div,
+#second-container div {
     aspect-ratio: 1;
     border-radius: 0.1rem;
     transition-duration: 0.2s;
@@ -57,7 +74,8 @@ nav #first-container {
     border-top: 1px solid rgba(255, 255, 255, 0.0);
 }
 
-#first-container div:hover {
+#first-container div:hover,
+#second-container div:hover {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 0.5rem;
     transition-duration: 0.5s;
@@ -70,5 +88,9 @@ nav #first-container {
 }
 
 #first-container div:nth-child(2) svg {
-    color: #c8c9d9;
+    color: #eff7ff;
+}
+
+#second-container div:nth-child(1) {
+    color: white;
 }
