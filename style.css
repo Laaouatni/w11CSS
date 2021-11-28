@@ -3,6 +3,7 @@
     --max-height: 100vh;
     --max-width: 100vw;
     --img-nav-height: calc(var(--nav-height) - 1.5rem);
+    --w11-logo-gradient: linear-gradient(135deg, #6bd3ff, #0079d4);
 }
 
 body {
@@ -29,23 +30,45 @@ nav {
     backdrop-filter: blur(5em);
 }
 
-#first-container svg {
+#first-container div svg {
     aspect-ratio: 1;
     height: var(--img-nav-height);
     width: auto;
-    fill: linear-gradient(135deg, #6bd3ff, #0079d4) white;
-    border-radius: 0.2em;
+    border-radius: 0.1em;
 }
 
-nav div {
+nav #first-container {
     height: 100%;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    gap: 0.5rem;
+}
+
+#first-container div {
+    aspect-ratio: 1;
+    border-radius: 0.1rem;
+    transition-duration: 0.2s;
+    height: 85%;
     display: grid;
     place-content: center;
-    position: fixed;
+    border-top: 1px solid rgba(255, 255, 255, 0.0);
+}
+
+#first-container div:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    transition-duration: 0.5s;
+    border-top: 1px solid rgba(255, 255, 255, 0.075);
 }
 
 #w11-logo {
     border-radius: 0.2rem;
     fill: white;
+}
+
+#first-container div:nth-child(2) svg {
+    color: #c8c9d9;
 }
