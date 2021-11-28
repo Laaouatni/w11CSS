@@ -51,7 +51,6 @@ nav #nav-container {
 #first-container div img,
 #second-container div svg,
 #second-container div img {
-    aspect-ratio: 1;
     height: var(--img-nav-height);
     width: auto;
     border-radius: 0.1em;
@@ -61,10 +60,12 @@ nav #nav-container {
     margin: auto;
 }
 
-#second-container {}
+#second-container {
+    color: white;
+    margin: 1em;
+}
 
-#first-container div,
-#second-container div {
+#first-container div {
     aspect-ratio: 1;
     border-radius: 0.1rem;
     transition-duration: 0.2s;
@@ -74,8 +75,14 @@ nav #nav-container {
     border-top: 1px solid rgba(255, 255, 255, 0.0);
 }
 
-#first-container div:hover,
-#second-container div:hover {
+#second-container div {
+    aspect-ratio: 1;
+    display: grid;
+    place-content: center;
+    font-size: ;
+}
+
+#first-container div:hover {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 0.5rem;
     transition-duration: 0.5s;
