@@ -138,3 +138,9 @@ nav #nav-container {
 #first-container div:nth-child(2) svg {
     color: #eff7ff;
 }
+
+#w11-start-section {
+    backdrop-filter: blur(1em);
+    color: white;
+    height: 5
+}
