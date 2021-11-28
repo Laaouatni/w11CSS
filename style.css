@@ -1,0 +1,51 @@
+* {
+    --nav-height: 3rem;
+    --max-height: 100vh;
+    --max-width: 100vw;
+    --img-nav-height: calc(var(--nav-height) - 1.5rem);
+}
+
+body {
+    height: var(--max-height);
+    width: var(--max-width);
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url(../images/1dark.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+nav {
+    background: linear-gradient(rgba(0, 0, 85, 0.075), transparent, rgba(0, 0, 85, 0.192));
+    height: var(--nav-height);
+    width: var(--max-width);
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    box-shadow: 0 0 1em rgba(0, 0, 255, 0.027);
+    backdrop-filter: blur(5em);
+}
+
+#first-container svg {
+    aspect-ratio: 1;
+    height: var(--img-nav-height);
+    width: auto;
+    fill: linear-gradient(135deg, #6bd3ff, #0079d4) white;
+    border-radius: 0.2em;
+}
+
+nav div {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    position: fixed;
+}
+
+#w11-logo {
+    border-radius: 0.2rem;
+    fill: white;
+}
