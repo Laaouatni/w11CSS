@@ -7,6 +7,7 @@
     --bg-color-search: #1e202c;
     --border-color-search: #292b41;
     --bottom-border-color-search: #9dcbe3;
+    --placeholder-color-search: #a2a5ae;
     font-family: poppins, monospace;
 }
 
@@ -170,4 +171,51 @@ nav #nav-container {
     border-radius: 0.5em;
     border: 1px solid var(--border-color-search);
     border-bottom: 2px solid var(--bottom-border-color-search);
+}
+
+#cerca-input-start::placeholder {
+    color: var(--placeholder-color-search);
+}
+
+#apps-container #first-app-container {
+    font-size: 0.7em;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 1.5em 1em;
+    align-items: center;
+}
+
+#first-app-container div {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.5em;
+    border-radius: 0.5em;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    transition-duration: 0.2s;
+    font-weight: 300;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#first-app-container div:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition-duration: 0.5s;
+    border-top: none;
+}
+
+#first-app-container div ion-icon {
+    padding: 0 0 0 0.5em;
+}
+
+#second-app-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.5em;
+}
+
+#second-app-container div {
+    background-color: rgba(255, 255, 255, 0.111);
+    aspect-ratio: 1;
+    border-radius: 0.3em;
 }
