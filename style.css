@@ -229,6 +229,18 @@ nav #nav-container {
     width: 40%;
 }
 
+#second-app-container :nth-child(1) {
+    filter: drop-shadow(0 0 2em rgb(0, 255, 251));
+}
+
+#second-app-container :nth-child(2) {
+    filter: drop-shadow(0 0 2em rgb(0, 110, 255));
+}
+
+#second-app-container :nth-child(3) {
+    filter: drop-shadow(0 0 2em green);
+}
+
 #second-app-container span {
     font-size: 0.7em;
     font-weight: lighter;

@@ -1,4 +1,5 @@
 function visible() {
+    console.log("maybe this function works")
     const startSection = document.getElementById('#w11-start-section');
     const input = document.getElementById('#windows-on-off');
     /* if input checkbox is checked, show the start section */
