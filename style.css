@@ -27,7 +27,7 @@ body {
 body {
     display: grid;
     justify-content: center;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
 }
 
 nav {
@@ -218,4 +218,22 @@ nav #nav-container {
     background-color: rgba(255, 255, 255, 0.111);
     aspect-ratio: 1;
     border-radius: 0.3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2em;
+}
+
+#second-app-container img {
+    aspect-ratio: 1;
+    width: 40%;
+}
+
+#second-app-container span {
+    font-size: 0.7em;
+    font-weight: lighter;
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
 }
