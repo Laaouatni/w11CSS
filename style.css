@@ -150,9 +150,7 @@ nav #nav-container {
 }
 
 #w11-start-section {
-    backdrop-filter: blur(1em);
     color: white;
-    height: 5
 }
 
 #windows-logo {
@@ -162,6 +160,8 @@ nav #nav-container {
 #w11-start-section {
     backdrop-filter: blur(5em);
     padding: 1em;
+    transform: translateY(100%);
+    transition-duration: 0.5s;
 }
 
 #cerca-input-start {
@@ -236,4 +236,8 @@ nav #nav-container {
     color: white;
     text-align: center;
     text-transform: capitalize;
+}
+
+.on-visible {
+    transform: translate(0%);
 }
