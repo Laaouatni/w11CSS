@@ -4,6 +4,9 @@
     --max-width: 100vw;
     --img-nav-height: calc(var(--nav-height) - 1.5rem);
     --w11-logo-gradient: linear-gradient(135deg, #6bd3ff, #0079d4);
+    --bg-color-search: #1e202c;
+    --border-color-search: #292b41;
+    --bottom-border-color-search: #9dcbe3;
     font-family: poppins, monospace;
 }
 
@@ -18,6 +21,12 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+}
+
+body {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
 }
 
 nav {
@@ -143,4 +152,22 @@ nav #nav-container {
     backdrop-filter: blur(1em);
     color: white;
     height: 5
+}
+
+#windows-logo {
+    filter: brightness(1.6);
+}
+
+#w11-start-section {
+    backdrop-filter: blur(5em);
+    padding: 1em;
+}
+
+#cerca-input-start {
+    background-color: var(--bg-color-search);
+    width: 100%;
+    height: 2.5em;
+    border-radius: 0.5em;
+    border: 1px solid var(--border-color-search);
+    border-bottom: 2px solid var(--bottom-border-color-search);
 }
