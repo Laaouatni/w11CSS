@@ -13,7 +13,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-image: url(../images/1dark.jpg);
+    background-image: url(./images/1dark.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
