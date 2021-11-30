@@ -161,7 +161,7 @@ nav #nav-container {
     display: grid;
     backdrop-filter: blur(5em);
     padding: 1em;
-    transform: translateY(100%);
+    transform: translateY(200%);
     transition-duration: 0.5s;
     width: 40em;
     border-radius: 1em;
@@ -218,7 +218,6 @@ nav #nav-container {
 }
 
 #second-app-container div {
-    background-color: rgba(255, 255, 255, 0.111);
     aspect-ratio: 1;
     border-radius: 0.3em;
     display: flex;
@@ -226,6 +225,11 @@ nav #nav-container {
     align-items: center;
     justify-content: center;
     gap: 0.2em;
+}
+
+#second-app-container div:hover {
+    background-color: rgba(255, 255, 255, 0.111);
+    transition-duration: 0.5s;
 }
 
 #second-app-container img {
