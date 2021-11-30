@@ -161,10 +161,12 @@ nav #nav-container {
     display: grid;
     backdrop-filter: blur(5em);
     padding: 1em;
-    transform: translateY(200%);
+    transform: translateY(100%);
     transition-duration: 0.5s;
     width: 40em;
     border-radius: 1em;
+    position: fixed;
+    bottom: 0;
 }
 
 #cerca-input-start {
@@ -248,7 +250,7 @@ nav #nav-container {
 }
 
 .on-visible {
-    transform: translate(0%) !important;
+    transform: translateY(-100%) !important;
     transition-duration: 0.5s;
 }
 
