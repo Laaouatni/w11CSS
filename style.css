@@ -254,3 +254,32 @@ nav #nav-container {
 label input {
     display: none;
 }
+
+#not-mobile-friendly {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-content: center;
+    color: white;
+    font-size: 6vw;
+    height: 100vh;
+    width: 100vw;
+    z-index: 999;
+    background: rgba(0, 0, 255, 0.241);
+    animation: blur 10s ease-out infinite;
+}
+
+@keyframes blur {
+    0% {
+        backdrop-filter: blur(5em);
+    }
+    50% {
+        backdrop-filter: blur(10em);
+    }
+    100% {
+        backdrop-filter: blur(5em);
+    }
+}
+
+@media(max-width: 700px) {}
