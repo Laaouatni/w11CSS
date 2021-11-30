@@ -160,6 +160,8 @@ nav #nav-container {
 #w11-start-section {
     backdrop-filter: blur(5em);
     padding: 1em;
+    transform: translateY(100%);
+    transition-duration: 0.5s;
     transition-duration: 0.5s;
 }
 
@@ -249,13 +251,8 @@ nav #nav-container {
     text-transform: capitalize;
 }
 
-.off {
-    transform: translate(100%);
-    transition-duration: 0.5s;
-}
-
 .on-visible {
-    transform: translate(0%);
+    transform: translate(0%) !important;
     transition-duration: 0.5s;
 }
 
