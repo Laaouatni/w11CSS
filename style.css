@@ -26,8 +26,8 @@ body {
 
 body {
     display: grid;
-    justify-content: center;
-    grid-template-columns: 1fr;
+    align-content: center;
+    justify-items: center;
 }
 
 nav {
@@ -158,11 +158,13 @@ nav #nav-container {
 }
 
 #w11-start-section {
+    display: grid;
     backdrop-filter: blur(5em);
     padding: 1em;
     transform: translateY(100%);
     transition-duration: 0.5s;
-    transition-duration: 0.5s;
+    width: 40em;
+    border-radius: 1em;
 }
 
 #cerca-input-start {
@@ -228,19 +230,8 @@ nav #nav-container {
 
 #second-app-container img {
     aspect-ratio: 1;
-    width: 40%;
-}
-
-#second-app-container :nth-child(1) {
-    filter: drop-shadow(0 0 2em rgb(0, 255, 251));
-}
-
-#second-app-container :nth-child(2) {
-    filter: drop-shadow(0 0 2em rgb(0, 110, 255));
-}
-
-#second-app-container :nth-child(3) {
-    filter: drop-shadow(0 0 2em green);
+    width: 2.5rem;
+    margin: 0.1em;
 }
 
 #second-app-container span {
