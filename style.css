@@ -161,12 +161,11 @@ nav #nav-container {
     display: grid;
     backdrop-filter: blur(5em);
     padding: 1em;
-    transform: translateY(100%);
     transition-duration: 0.5s;
     width: 40em;
     border-radius: 1em;
     position: fixed;
-    bottom: 0;
+    bottom: calc(-100%);
 }
 
 #cerca-input-start {
@@ -182,7 +181,7 @@ nav #nav-container {
     color: var(--placeholder-color-search);
 }
 
-#apps-container #first-app-container {
+#apps-container .app-container-header {
     font-size: 0.7em;
     font-weight: bold;
     display: grid;
@@ -191,7 +190,7 @@ nav #nav-container {
     align-items: center;
 }
 
-#first-app-container div {
+.app-container-header div {
     background-color: rgba(255, 255, 255, 0.1);
     padding: 0.5em;
     border-radius: 0.5em;
@@ -203,13 +202,13 @@ nav #nav-container {
     align-items: center;
 }
 
-#first-app-container div:hover {
+.app-container-header div:hover {
     background-color: rgba(255, 255, 255, 0.2);
     transition-duration: 0.5s;
     border-top: none;
 }
 
-#first-app-container div ion-icon {
+.app-container-header div ion-icon {
     padding: 0 0 0 0.5em;
 }
 
@@ -250,7 +249,7 @@ nav #nav-container {
 }
 
 .on-visible {
-    transform: translateY(-100%) !important;
+    bottom: calc(var(--nav-height) + 1em) !important;
     transition-duration: 0.5s;
 }
 
