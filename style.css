@@ -8,6 +8,8 @@
     --border-color-search: #292b41;
     --bottom-border-color-search: #9dcbe3;
     --placeholder-color-search: #a2a5ae;
+    --glass-white-color: rgba(255, 255, 255, 0.1);
+    --footer-start-height: 4em;
     font-family: poppins, monospace;
 }
 
@@ -134,7 +136,7 @@ nav #nav-container {
 }
 
 #first-container div:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--glass-white-color);
     border-radius: 0.5rem;
     transition-duration: 0.5s;
     border-top: 1px solid rgba(255, 255, 255, 0.075);
@@ -160,12 +162,13 @@ nav #nav-container {
 #w11-start-section {
     display: grid;
     backdrop-filter: blur(5em);
-    padding: 1em;
+    padding: 2em;
     transition-duration: 0.5s;
     width: 40em;
     border-radius: 1em;
     position: fixed;
     bottom: calc(-100%);
+    overflow: hidden;
 }
 
 #cerca-input-start {
@@ -181,8 +184,8 @@ nav #nav-container {
     color: var(--placeholder-color-search);
 }
 
-#apps-container .app-container-header {
-    font-size: 0.7em;
+.app-container-header {
+    font-size: 0.95em;
     font-weight: bold;
     display: grid;
     grid-template-columns: 1fr auto;
@@ -230,7 +233,7 @@ nav #nav-container {
 }
 
 #second-app-container div:hover {
-    background-color: rgba(255, 255, 255, 0.111);
+    background-color: var(--glass-white-color);
     transition-duration: 0.5s;
 }
 
@@ -274,7 +277,55 @@ label input {
     font-weight: bolder;
 }
 
-@media(max-width: 700px) {
+#article-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    margin-bottom: var(--footer-start-height)
+}
+
+#article-container img {
+    aspect-ratio: 1;
+    width: 2.5em;
+    padding: 0.3em 1em;
+}
+
+#article-container>div {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1em;
+    padding: 0.5em;
+    border-radius: 0.3em;
+    align-items: center;
+    transition-duration: 0.5s;
+}
+
+#article-container>div:hover {
+    background-color: var(--glass-white-color);
+    transition-duration: 0.5s;
+}
+
+#article-container>div>div:nth-child(2)>div:nth-child(1) {
+    font-size: 0.9em;
+}
+
+#article-container>div>div:nth-child(2)>div:nth-child(2) {
+    font-size: 0.8em;
+    margin-top: 0.2em;
+    opacity: 0.7;
+}
+
+#footer-start-section {
+    height: var(--footer-start-height);
+    backdrop-filter: blur(10em);
+    background-color: rgba(0, 0, 0, 0.514);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+@media(max-width: 800px) {
     #not-mobile-friendly {
         display: grid;
     }
