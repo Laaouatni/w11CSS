@@ -368,20 +368,20 @@ label input {
     fill: white !important;
 }
 
-#first-container img:focus,
-#first-container svg:focus {
-    animation: nav-anim 1s ease-in infinite;
+#first-container img:active,
+#first-container svg:active {
+    animation: nav-anim 1s ease-out;
 }
 
 @keyframes nav-anim {
     from {
-        translate: scale(1);
+        transform: scale(1);
     }
-    50% {
-        translate: scale(0.7);
+    70% {
+        transform: scale(0.2);
     }
     to {
-        translate: scale(1);
+        transform: scale(1);
     }
 }
 
