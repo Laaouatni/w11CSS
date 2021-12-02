@@ -368,24 +368,24 @@ label input {
     fill: white !important;
 }
 
-#first-container img:active,
-#first-container svg:active {
-    animation: nav-anim 1s ease-out;
+#first-container div:active>img,
+#first-container div:active>svg {
+    transform: scale(0.5);
+    transition-duration: 0.5s;
 }
 
-@keyframes nav-anim {
-    from {
-        transform: scale(1);
-    }
-    70% {
-        transform: scale(0.2);
-    }
-    to {
-        transform: scale(1);
-    }
+#first-container img,
+#first-container svg {
+    transition-duration: 0.5s;
 }
 
 @media(max-width: 800px) {
+    #not-mobile-friendly {
+        display: grid;
+    }
+}
+
+@media(max-height: 960px) {
     #not-mobile-friendly {
         display: grid;
     }
