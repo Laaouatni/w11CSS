@@ -202,6 +202,10 @@ nav #nav-container {
     align-items: center;
 }
 
+.app-container-header span {
+    filter: drop-shadow(0 0 1em white);
+}
+
 .app-container-header div {
     background-color: rgba(255, 255, 255, 0.1);
     padding: 0.5em;
@@ -330,7 +334,8 @@ label input {
     outline: var(--glass-white-color) solid 2px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 4em;
     align-items: center;
 }
 
@@ -361,6 +366,23 @@ label input {
     height: 1.7em;
     width: auto;
     fill: white !important;
+}
+
+#first-container img:focus,
+#first-container svg:focus {
+    animation: nav-anim 1s ease-in infinite;
+}
+
+@keyframes nav-anim {
+    from {
+        translate: scale(1);
+    }
+    50% {
+        translate: scale(0.7);
+    }
+    to {
+        translate: scale(1);
+    }
 }
 
 @media(max-width: 800px) {
