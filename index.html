@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.0/dist/boxicons.js"></script>
 </head>
 
 <body>
@@ -43,109 +44,108 @@
         </div>
     </nav>
     <section id="w11-start-section" class="">
-        <div><input type="text" id="cerca-input-start" placeholder="scrivi qui il testo da cercare"></div>
-        <div id="apps-container">
-            <div class="app-container-header">
-                <span>Aggiunto</span>
-                <div>
-                    <span>Tutte le app</span>
-                    <ion-icon name="ios-arrow-forward"></ion-icon>
+        <div class="padding-start">
+            <div><input type="text" id="cerca-input-start" placeholder="scrivi qui il testo da cercare"></div>
+            <div id="apps-container">
+                <div class="app-container-header">
+                    <span>Aggiunto</span>
+                    <div>
+                        <span>Tutte le app</span>
+                        <ion-icon name="ios-arrow-forward"></ion-icon>
+                    </div>
+                </div>
+                <div id="second-app-container">
+                    <!-- 1 LINEA ORRIZONTALE -->
+                    <div><img src="./images/edge-icon.png" alt="edge icon">
+                        <span>Edge</span>
+                    </div>
+                    <div><img src="./images/word-icon.png" alt="word icon"><span>Word</span></div>
+                    <div><img src="./images/excel-icon.png" alt="excel icon"><span>Excel</span></div>
+                    <div><img src="./images/powerpoint-icon.png" alt="powerpoint icon"><span>Powerpoint</span></div>
+                    <div><img src="./images/ms-office.ico" alt="office icon microsoft"><span>Office</span></div>
+                    <div><img src="./images/outlook-icon.png" alt="outlook icon"><span>Posta</span></div>
+                    <!-- 2 LINEA ORRIZONTALE -->
+                    <div><img src="./images/calendar-icon.png" alt="calendar icon"><span>Calendario</span></div>
+                    <div><img src="./images/ms-store-icon.png" alt="microsoft store icon"><span>Microsoft Store</span></div>
+                    <div><img src="./images/ms-foto-icon.ico" alt="galleria icon by microsoft 11"><span>Foto</span></div>
+                    <div><img src="./images/ms-video-icon.ico" alt="microsoft video icon by microsoft"><span>Film & TV</span></div>
+                    <div><img src="./images/Paint-2D.ico" alt="paint 2d icon by microsoft"><span>Paint</span></div>
+                    <div><img src="./images/Paint-3D.ico" alt="paint 2d icon by microsoft"><span>Paint 3D</span></div>
+                    <!-- 3 LINEA ORRIZONTALE -->
+                    <div><img src="./images/Whiteboard.ico" alt="whiteboard icon by microsoft"><span>WhiteBoard</span></div>
+                    <div><img src="./images/ms-impostazioni-icon.ico" alt="impostazioni icon by microsoft"><span>Impostazioni</span></div>
+                    <div><img src="./images/ms-skype.ico" alt="skype icon by microsoft"><span>Skype</span></div>
+                    <div><img src="./images/vs-code.ico" alt="vs code icon by microsoft"><span>Visual Studio code</span></div>
+                    <div><img src="./images/vs-normal.ico" alt="visual Studio normal icon by microsoft"><span>Visual Studio</span></div>
+                    <div><img src="./images/ms-file-explorer.ico" alt="file Explorer icon by microsoft"><span>Esplora File</span></div>
                 </div>
             </div>
-            <div id="second-app-container">
-                <!-- 1 LINEA ORRIZONTALE -->
-                <div><img src="./images/edge-icon.png" alt="edge icon">
-                    <span>Edge</span>
-                </div>
-                <div><img src="./images/word-icon.png" alt="word icon"><span>Word</span></div>
-                <div><img src="./images/excel-icon.png" alt="excel icon"><span>Excel</span></div>
-                <div><img src="./images/powerpoint-icon.png" alt="powerpoint icon"><span>Powerpoint</span></div>
-                <div><img src="./images/ms-office.ico" alt="office icon microsoft"><span>Office</span></div>
-                <div><img src="./images/outlook-icon.png" alt="outlook icon"><span>Posta</span></div>
-                <!-- 2 LINEA ORRIZONTALE -->
-                <div><img src="./images/calendar-icon.png" alt="calendar icon"><span>Calendario</span></div>
-                <div><img src="./images/ms-store-icon.png" alt="microsoft store icon"><span>Microsoft Store</span></div>
-                <div><img src="./images/ms-foto-icon.ico" alt="galleria icon by microsoft 11"><span>Foto</span></div>
-                <div><img src="./images/ms-video-icon.ico" alt="microsoft video icon by microsoft"><span>Film & TV</span></div>
-                <div><img src="./images/Paint-2D.ico" alt="paint 2d icon by microsoft"><span>Paint</span></div>
-                <div><img src="./images/Paint-3D.ico" alt="paint 2d icon by microsoft"><span>Paint 3D</span></div>
-                <!-- 3 LINEA ORRIZONTALE -->
-                <div><img src="./images/Whiteboard.ico" alt="whiteboard icon by microsoft"><span>WhiteBoard</span></div>
-                <div><img src="./images/ms-impostazioni-icon.ico" alt="impostazioni icon by microsoft"><span>Impostazioni</span></div>
-                <div><img src="./images/ms-skype.ico" alt="skype icon by microsoft"><span>Skype</span></div>
-                <div><img src="./images/vs-code.ico" alt="vs code icon by microsoft"><span>Visual Studio code</span></div>
-                <div><img src="./images/vs-normal.ico" alt="visual Studio normal icon by microsoft"><span>Visual Studio</span></div>
-                <div><img src="./images/ms-file-explorer.ico" alt="file Explorer icon by microsoft"><span>Esplora File</span></div>
-            </div>
-        </div>
-        <div id="article-div">
-            <div class="app-container-header">
-                <span>Articoli consigliati</span>
-                <div>
-                    <span>Altro</span>
-                    <ion-icon name="ios-arrow-forward"></ion-icon>
-                </div>
-            </div>
-            <div id="article-container">
-                <!-- 1 LINEA ORIZZONTALE -->
-                <div>
-                    <div><img src="./images/Photos-folder.ico" alt="folder microsoft"></div>
+            <div id="article-div">
+                <div class="app-container-header">
+                    <span>Articoli consigliati</span>
                     <div>
-                        <div>Nome Cartella</div>
-                        <div>30 minuti fa</div>
+                        <span>Altro</span>
+                        <ion-icon name="ios-arrow-forward"></ion-icon>
                     </div>
                 </div>
-                <div>
-                    <div><img src="./images/Photos-folder.ico" alt="folder microsoft"></div>
+                <div id="article-container">
+                    <!-- 1 LINEA ORIZZONTALE -->
                     <div>
-                        <div>Nome Cartella</div>
-                        <div>30 minuti fa</div>
+                        <div><img src="./images/Photos-folder.ico" alt="folder microsoft"></div>
+                        <div>
+                            <div>Nome Cartella</div>
+                            <div>30 minuti fa</div>
+                        </div>
                     </div>
-                </div>
-                <!-- 2 LINEA ORIZZONTALE -->
-                <div>
-                    <div><img src="./images/Photos-folder.ico" alt="folder microsoft"></div>
                     <div>
-                        <div>Nome Cartella</div>
-                        <div>30 minuti fa</div>
+                        <div><img src="./images/Photos-folder.ico" alt="folder microsoft"></div>
+                        <div>
+                            <div>Nome Cartella</div>
+                            <div>30 minuti fa</div>
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <div><img src="./images/Photos-folder.ico" alt="folder microsoft"></div>
+                    <!-- 2 LINEA ORIZZONTALE -->
                     <div>
-                        <div>Nome Cartella</div>
-                        <div>30 minuti fa</div>
+                        <div><img src="./images/Photos-folder.ico" alt="folder microsoft"></div>
+                        <div>
+                            <div>Nome Cartella</div>
+                            <div>30 minuti fa</div>
+                        </div>
                     </div>
-                </div>
-                <!-- 3 LINEA ORIZZONTALE -->
-                <div>
-                    <div><img src="./images/Photos-folder.ico" alt="folder microsoft"></div>
                     <div>
-                        <div>Nome Cartella</div>
-                        <div>30 minuti fa</div>
+                        <div><img src="./images/Photos-folder.ico" alt="folder microsoft"></div>
+                        <div>
+                            <div>Nome Cartella</div>
+                            <div>30 minuti fa</div>
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <div><img src="./images/Photos-folder.ico" alt="folder microsoft"></div>
+                    <!-- 3 LINEA ORIZZONTALE -->
                     <div>
-                        <div>Nome Cartella</div>
-                        <div>30 minuti fa</div>
+                        <div><img src="./images/Photos-folder.ico" alt="folder microsoft"></div>
+                        <div>
+                            <div>Nome Cartella</div>
+                            <div>30 minuti fa</div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div id="footer-start-section">
-                <div>
-                    <img src="" alt="">
-                    <span>Laaouatni.</span>
-                </div>
-                <div>
-                    <img src="" alt="">
+                    <div>
+                        <div><img src="./images/Photos-folder.ico" alt="folder microsoft"></div>
+                        <div>
+                            <div>Nome Cartella</div>
+                            <div>30 minuti fa</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
-
-
+        <div id="footer-start-section">
+            <div class="nome-utente-start-section">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M12 2C6.579 2 2 6.579 2 12s4.579 10 10 10 10-4.579 10-10S17.421 2 12 2zm0 5c1.727 0 3 1.272 3 3s-1.273 3-3 3c-1.726 0-3-1.272-3-3s1.274-3 3-3zm-5.106 9.772c.897-1.32 2.393-2.2 4.106-2.2h2c1.714 0 3.209.88 4.106 2.2C15.828 18.14 14.015 19 12 19s-3.828-.86-5.106-2.228z"></path></svg>
+                <span>Laaouatni.</span>
+            </div>
+            <div class="spegni-pc-start-section">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M12 21c4.411 0 8-3.589 8-8 0-3.35-2.072-6.221-5-7.411v2.223A6 6 0 0 1 18 13c0 3.309-2.691 6-6 6s-6-2.691-6-6a5.999 5.999 0 0 1 3-5.188V5.589C6.072 6.779 4 9.65 4 13c0 4.411 3.589 8 8 8z"></path><path d="M11 2h2v10h-2z"></path></svg>
+            </div>
+        </div>
     </section>
     <script>
         let startContainer = document.querySelector('#w11-start-section');
