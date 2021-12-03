@@ -264,6 +264,15 @@ nav #nav-container {
     text-transform: capitalize;
 }
 
+#second-app-container>div:active img {
+    transform: scale(0.8);
+    transition-duration: 0.3s;
+}
+
+#second-app-container>div img {
+    transition-duration: 0.3s;
+}
+
 .on-visible {
     bottom: calc(var(--nav-height) + 1em) !important;
     transition-duration: 0.5s;
@@ -377,6 +386,30 @@ label input {
 #first-container img,
 #first-container svg {
     transition-duration: 0.5s;
+}
+
+#first-container>div[title]:hover::after {
+    content: attr(title);
+    color: white;
+    position: absolute;
+    transform: translateY(calc(-100% - 1em));
+    padding: 0.2em 0.5em;
+    outline: var(--glass-white-color) solid 2px;
+    border-radius: 0.5em;
+    font-size: 0.9em;
+    background-color: rgba(0, 0, 68, 0.623);
+    transition-duration: 0.5s;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(calc(-100% - 3em));
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @media(max-width: 800px) {
