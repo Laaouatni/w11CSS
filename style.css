@@ -28,8 +28,7 @@ body {
 
 body {
     display: grid;
-    align-content: center;
-    justify-items: center;
+    grid-template-columns: 1fr 1fr;
 }
 
 nav {
@@ -153,6 +152,8 @@ nav #nav-container {
 
 #w11-start-section {
     color: white;
+    align-self: center;
+    justify-self: center;
 }
 
 #windows-logo {
@@ -319,6 +320,7 @@ label input {
     border-radius: 0.3em;
     align-items: center;
     transition-duration: 0.5s;
+    cursor: pointer;
 }
 
 #article-container>div:hover {
@@ -388,7 +390,8 @@ label input {
     transition-duration: 0.5s;
 }
 
-#first-container>div[title]:hover::after {
+#first-container>div[title]:hover::after,
+#sistema-info>div[title]:hover::after {
     content: attr(title);
     color: white;
     position: absolute;
@@ -400,6 +403,22 @@ label input {
     background-color: rgba(0, 0, 68, 0.623);
     transition-duration: 0.5s;
     animation: fadeIn 0.5s;
+}
+
+#sistema-info>div[title]:hover::after {
+    transform: translateY(calc(-100% - 2em));
+    font-size: 0.6em;
+}
+
+#widget-section {
+    background-color: rgb(0, 0, 255);
+    backdrop-filter: blur(1em);
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    margin: 1em 0 calc(var(--nav-height) + 1em) 1em;
+    border-radius: 1em;
 }
 
 @keyframes fadeIn {
