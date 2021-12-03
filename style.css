@@ -411,8 +411,8 @@ label input {
 }
 
 #widget-section {
-    background-color: rgb(0, 0, 255);
     backdrop-filter: blur(1em);
+    background-color: rgba(0, 1, 63, 0.26);
     display: grid;
     grid-column-start: 1;
     grid-column-end: 2;
