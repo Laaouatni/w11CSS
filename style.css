@@ -419,6 +419,8 @@ label input {
     grid-row-start: 1;
     margin: 1em 0 calc(var(--nav-height) + 1em) 1em;
     border-radius: 1em;
+    color: white;
+    padding: 1em;
 }
 
 @keyframes fadeIn {
