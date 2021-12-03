@@ -421,6 +421,7 @@ label input {
     border-radius: 1em;
     color: white;
     padding: 1em;
+    outline: var(--glass-white-color) solid 2px;
 }
 
 @keyframes fadeIn {
