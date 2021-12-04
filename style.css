@@ -29,7 +29,7 @@ body {
 
 body {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: minmax(700px, 1fr) 1fr;
 }
 
 nav {
@@ -434,6 +434,7 @@ label input {
     grid-template-areas: "meteo calendario" "galleria calendario" "galleria video" "todo traffico";
     gap: 1em;
     grid-auto-columns: 1fr;
+    padding: 2em;
 }
 
 #widget-section>div {
