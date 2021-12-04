@@ -344,7 +344,7 @@ label input {
     height: var(--footer-start-height);
     backdrop-filter: blur(10em);
     background-color: rgba(0, 0, 0, 0.514);
-    border: var(--glass-white-color) solid 2px;
+    outline: var(--glass-white-color) solid 2px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -405,6 +405,16 @@ label input {
     background-color: rgba(0, 0, 68, 0.623);
     transition-duration: 0.5s;
     animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(calc(-100% - 3em));
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 #sistema-info>div[title]:hover::after {
@@ -514,13 +524,100 @@ label input {
     background: linear-gradient(135deg, #ffdd002d, #00ecd821);
 }
 
-@keyframes fadeIn {
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    animation: fadeOut-video 5s ease-in;
+    animation-fill-mode: forwards;
+    z-index: -1;
+}
+
+@keyframes fadeOut-video {
+    0% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+.pc-off {
+    transition-duration: 3s;
+    display: grid !important;
+    transition-timing-function: ease-out;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: black;
+    z-index: 10;
+    animation: opacity 3s ease-in-out;
+}
+
+@keyframes opacity {
     from {
         opacity: 0;
-        transform: translateY(calc(-100% - 3em));
     }
     to {
         opacity: 1;
+    }
+}
+
+#spegni-section {
+    place-content: center;
+}
+
+#spegni-section>div {
+    display: grid;
+    /* grid-template-columns: auto auto; */
+    animation: rotate 5s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    to {
+        transform: rotate(1000deg);
+        filter: blur(0.5em);
+        opacity: 0.5;
+    }
+}
+
+#spegni-section {
+    display: none;
+}
+
+#spegni-section div>div {
+    background: white;
+    height: 1em;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    margin: 1em;
+    transition-duration: 1s;
+    animation: ball-div-animation 2s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes ball-div-animation {
+    0% {
+        background-color: white;
+        transform: translatex(10em) translateY(calc(0em * var(--i)));
+    }
+    100% {
+        transform: translatex(0em) translateY(calc(2em * var(--i)));
+        background-color: rgb(0, 89, 255);
     }
 }
 
