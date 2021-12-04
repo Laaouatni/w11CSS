@@ -28,7 +28,7 @@ body {
 
 body {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
 }
 
 nav {
@@ -170,7 +170,7 @@ nav #nav-container {
     bottom: calc(-100%);
     overflow: hidden;
     outline: var(--glass-white-color) solid 2px;
-    /* box-sizing: border-box; */
+    transition-timing-function: cubic-bezier(.4, .01, .15, 1.1);
 }
 
 .padding-start:not(#footer-start-section) {
@@ -225,8 +225,9 @@ nav #nav-container {
     border-top: none;
 }
 
-.app-container-header div ion-icon {
+.app-container-header div svg {
     padding: 0 0 0 0.5em;
+    fill: white !important;
 }
 
 #second-app-container {
@@ -274,7 +275,7 @@ nav #nav-container {
     transition-duration: 0.3s;
 }
 
-.on-visible {
+.on-visible-start {
     bottom: calc(var(--nav-height) + 1em) !important;
     transition-duration: 0.5s;
 }
@@ -422,6 +423,25 @@ label input {
     color: white;
     padding: 1em;
     outline: var(--glass-white-color) solid 2px;
+    transition-duration: 0.5s;
+    transform: translateX(calc(-100% - 5em));
+    transition-timing-function: cubic-bezier(.4, .01, .15, 1.1);
+}
+
+#widget-section {
+    display: grid;
+    grid-template-areas: "meteo calendario" "galleria calendario" "galleria video" "todo traffico";
+    gap: 1em;
+    grid-auto-columns: 1fr;
+}
+
+#widget-section>div {
+    border: 3px solid var(--glass-white-color);
+    border-radius: 0.7em;
+}
+
+.on-visible-widget {
+    transform: translateX(0%) !important;
     transition-duration: 0.5s;
 }
 

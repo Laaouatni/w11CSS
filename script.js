@@ -1,10 +1,25 @@
 let startContainer = document.querySelector('#w11-start-section');
-let btn = document.querySelector('#windows-div');
-let widgetContainer = document.querySelector('#')
-
-
+let startBtn = document.querySelector('#windows-div');
+let widgetContainer = document.querySelector('#widget-section');
+let widgetBtn = document.querySelector('#widget-div');
 
 /* from bottom to top WINDOWS START animation */
-btn.addEventListener("click", function() {
-    startContainer.classList.toggle("on-visible");
+startBtn.addEventListener("click", function() {
+    if (widgetContainer.classList.contains("on-visible-widget")) {
+        widgetContainer.classList.toggle("on-visible-widget");
+        startContainer.classList.toggle("on-visible-start");
+    } else {
+        startContainer.classList.toggle("on-visible-start");
+    }
+
+});
+
+/* from bottom to top WINDOWS START animation */
+widgetBtn.addEventListener("click", function() {
+    if (startContainer.classList.contains("on-visible-start")) {
+        startContainer.classList.toggle("on-visible-start");
+        widgetContainer.classList.toggle("on-visible-widget");
+    } else {
+        widgetContainer.classList.toggle("on-visible-widget");
+    }
 });
