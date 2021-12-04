@@ -467,6 +467,7 @@ label input {
     box-shadow: 0em 0.5em 3em #ecaa00;
     aspect-ratio: 1;
     border-radius: 50%;
+    margin: 1em;
 }
 
 .content-widget {
@@ -478,12 +479,12 @@ label input {
 }
 
 .temperatura-container {
-    font-size: 4vw;
+    font-size: 4em;
     font-weight: 500;
 }
 
 .temperatura-container span:nth-of-type(2) {
-    font-size: 2vw;
+    font-size: 0.5em;
     opacity: 0.5;
 }
 
