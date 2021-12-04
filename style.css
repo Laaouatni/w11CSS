@@ -530,7 +530,7 @@ label input {
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-    animation: fadeOut-video 5s ease-in;
+    /* animation: fadeOut-video 5s ease-in; */
     animation-fill-mode: forwards;
     z-index: -1;
 }
@@ -562,11 +562,12 @@ label input {
     min-height: 100%;
     background-color: black;
     z-index: 10;
-    animation: opacity 3s ease-in-out;
+    animation: opacity 2s ease-in-out;
 }
 
 @keyframes opacity {
     from {
+        display: none;
         opacity: 0;
     }
     to {
@@ -576,12 +577,13 @@ label input {
 
 #spegni-section {
     place-content: center;
+    transition-duration: 3s;
 }
 
 #spegni-section>div {
     display: grid;
     /* grid-template-columns: auto auto; */
-    animation: rotate 5s ease-in-out infinite alternate-reverse;
+    animation: rotate 2s ease-in-out infinite alternate-reverse;
 }
 
 @keyframes rotate {
@@ -590,7 +592,7 @@ label input {
         opacity: 1;
     }
     to {
-        transform: rotate(1000deg);
+        transform: rotate(360deg);
         filter: blur(0.5em);
         opacity: 0.5;
     }
@@ -618,6 +620,42 @@ label input {
     100% {
         transform: translatex(0em) translateY(calc(2em * var(--i)));
         background-color: rgb(0, 89, 255);
+    }
+}
+
+@media(max-width:1500px) {
+    #myVideo {
+        transform: translatex(16%);
+    }
+}
+
+@media(max-width:1350px) {
+    #myVideo {
+        transform: translatex(15%);
+    }
+}
+
+@media(max-width:1200px) {
+    #myVideo {
+        transform: translatex(22%);
+    }
+}
+
+@media(max-width:1270px) {
+    #myVideo {
+        transform: translatex(18%);
+    }
+}
+
+@media(max-width:1000px) {
+    #myVideo {
+        transform: translatex(25%);
+    }
+}
+
+@media (max-width: 900px) {
+    #myVideo {
+        transform: translatex(30%);
     }
 }
 

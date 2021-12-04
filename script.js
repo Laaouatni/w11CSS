@@ -32,3 +32,7 @@ widgetBtn.addEventListener("click", function() {
 spegniBtn.addEventListener("click", function() {
     spegniContainer.classList.toggle("pc-off")
 });
+
+spegniContainer.addEventListener("click", function() {
+    spegniContainer.classList.toggle("pc-off")
+});
