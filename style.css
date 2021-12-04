@@ -489,9 +489,23 @@ label input {
 .btn-meteo-widget {
     display: grid;
     height: 3em;
-    outline: 2px solid red;
-    border: 2px solid var(--glass-white-color);
+    border-top: 2px solid var(--glass-white-color);
     place-content: center;
+    text-decoration: none;
+    color: white;
+    text-shadow: 0 0 1em white;
+    transition-duration: 0.3s;
+    border-bottom: 0px solid white;
+}
+
+.btn-meteo-widget:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.1em;
+    transition-duration: 0.5s;
+}
+
+.widget-header-card:hover {
+    border-bottom: 2px solid var(--glass-white-color);
 }
 
 @keyframes fadeIn {
