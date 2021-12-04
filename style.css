@@ -10,6 +10,7 @@
     --placeholder-color-search: #a2a5ae;
     --glass-white-color: rgba(255, 255, 255, 0.1);
     --footer-start-height: 4em;
+    --sun-gradient: linear-gradient(135deg, #ffef80, #ecaa00);
     font-family: poppins, monospace;
 }
 
@@ -440,9 +441,57 @@ label input {
     border-radius: 0.7em;
 }
 
+#widget-section svg {
+    height: 1em;
+    aspect-ratio: 1;
+}
+
+.widget-header-card {
+    padding: 0.5em 1em;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
 .on-visible-widget {
     transform: translateX(0%) !important;
     transition-duration: 0.5s;
+}
+
+.sole-meteo {
+    height: 10vw;
+    background: var(--sun-gradient);
+    box-shadow: 0em 0.5em 3em #ecaa00;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+.content-widget {
+    height: calc(100% - 40px - 3em);
+    display: grid;
+    place-items: center;
+    grid-auto-flow: column;
+    padding: 0 1em;
+}
+
+.temperatura-container {
+    font-size: 4vw;
+    font-weight: 500;
+}
+
+.temperatura-container span:nth-of-type(2) {
+    font-size: 2vw;
+    opacity: 0.5;
+}
+
+.btn-meteo-widget {
+    display: grid;
+    height: 3em;
+    outline: 2px solid red;
+    border: 2px solid var(--glass-white-color);
+    place-content: center;
 }
 
 @keyframes fadeIn {
