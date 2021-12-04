@@ -29,7 +29,7 @@ body {
 
 body {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
 }
 
 nav {
@@ -170,7 +170,7 @@ nav #nav-container {
     position: fixed;
     bottom: calc(-100%);
     overflow: hidden;
-    outline: var(--glass-white-color) solid 2px;
+    border: 2px solid var(--glass-white-color);
     transition-timing-function: cubic-bezier(.4, .01, .15, 1.1);
 }
 
@@ -344,7 +344,7 @@ label input {
     height: var(--footer-start-height);
     backdrop-filter: blur(10em);
     background-color: rgba(0, 0, 0, 0.514);
-    outline: var(--glass-white-color) solid 2px;
+    border: var(--glass-white-color) solid 2px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -399,7 +399,7 @@ label input {
     position: absolute;
     transform: translateY(calc(-100% - 1em));
     padding: 0.2em 0.5em;
-    outline: var(--glass-white-color) solid 2px;
+    border: 2px solid var(--glass-white-color);
     border-radius: 0.5em;
     font-size: 0.9em;
     background-color: rgba(0, 0, 68, 0.623);
@@ -423,7 +423,7 @@ label input {
     border-radius: 1em;
     color: white;
     padding: 1em;
-    outline: var(--glass-white-color) solid 2px;
+    border: 2px solid var(--glass-white-color);
     transition-duration: 0.5s;
     transform: translateX(calc(-100% - 5em));
     transition-timing-function: cubic-bezier(.4, .01, .15, 1.1);
@@ -461,7 +461,7 @@ label input {
 }
 
 .sole-meteo {
-    height: 10vw;
+    height: 6em;
     background: var(--sun-gradient);
     box-shadow: 0em 0.5em 3em #ecaa00;
     aspect-ratio: 1;
@@ -506,6 +506,10 @@ label input {
 
 .widget-header-card:hover {
     border-bottom: 2px solid var(--glass-white-color);
+}
+
+#meteo-widget {
+    background: linear-gradient(135deg, #ffdd002d, #00ecd821);
 }
 
 @keyframes fadeIn {
