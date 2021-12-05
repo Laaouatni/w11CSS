@@ -7,6 +7,9 @@ let widgetBtn = document.querySelector('#widget-div');
 let spegniContainer = document.querySelector('#spegni-section');
 let spegniBtn = document.querySelector('.spegni-pc-start-section');
 
+let paddingContainer = document.querySelector('.padding-start');
+let searchBtn = document.querySelector('#search-div');
+
 /* from bottom to top WINDOWS START animation */
 startBtn.addEventListener("click", function() {
     if (widgetContainer.classList.contains("on-visible-widget")) {
@@ -15,7 +18,6 @@ startBtn.addEventListener("click", function() {
     } else {
         startContainer.classList.toggle("on-visible-start");
     }
-
 });
 
 /* from bottom to top WINDOWS START animation */
@@ -36,4 +38,10 @@ spegniBtn.addEventListener("click", function() {
 
 spegniContainer.addEventListener("click", function() {
     spegniContainer.classList.toggle("pc-off");
+});
+
+
+/* set display none in the paddingContainer, from clicking the paddingbtn */
+searchBtn.addEventListener("click", function() {
+    paddingContainer.classList.toggle("not-visible");
 });

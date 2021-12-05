@@ -642,6 +642,10 @@ label input {
     transition-duration: 0.5s;
 }
 
+.not-visible {
+    display: none !important;
+}
+
 @media(max-width:1500px) {
     #myVideo {
         transform: translatex(16%);
