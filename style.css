@@ -175,7 +175,7 @@ nav #nav-container {
 }
 
 .padding-start:not(#footer-start-section) {
-    padding: 2em;
+    padding: 0 2em 1em 2em;
 }
 
 #cerca-input-start {
@@ -193,6 +193,10 @@ nav #nav-container {
 
 #cerca-input-start::placeholder {
     color: var(--placeholder-color-search);
+}
+
+.input-div-start {
+    padding: 2em 2em 0 2em;
 }
 
 .app-container-header {
