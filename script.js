@@ -53,7 +53,7 @@ searchBtn.addEventListener("click", function() {
 });
 
 /* windows moving tab */
-windowsTab.addEventListener("mousedown", function() {
+topPartTab.addEventListener("mousedown", function() {
     console.log("mousedown");
     document.onmousemove = function(e) {
         var x = e.clientX;

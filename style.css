@@ -652,13 +652,15 @@ label input {
 
 #windows-tab {
     border: 2px solid rgba(255, 255, 255, 0.37);
-    min-height: 400px;
+    min-height: 100px;
+    height: 400px;
     backdrop-filter: blur(2em);
-    min-width: 400px;
+    min-width: 100px;
+    width: 400px;
     position: absolute;
     border-radius: 0.5em;
-    top: 0;
-    left: 0;
+    top: 1px;
+    left: 1px;
     resize: both;
     overflow: auto;
 }
