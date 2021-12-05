@@ -617,17 +617,17 @@ label input {
     from {
         transform: rotate(360deg);
         opacity: 1;
-        transform-origin: 4em 20em;
+        transform-origin: 4em 15em;
         margin: 0em;
         background-color: blue;
-        box-shadow: 0 0 10em blue;
+        box-shadow: 0 0 5em blue;
     }
     to {
         transform: rotate(calc(var(--i) * 1deg));
         filter: blur(0.2em);
         opacity: 0.5;
-        transform-origin: 15em 2em;
-        margin: 0.5em;
+        transform-origin: 15em 4em;
+        margin: 1em;
         height: 1.5em;
     }
 }
