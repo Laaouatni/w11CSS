@@ -138,7 +138,7 @@ nav #nav-container {
 #first-container div:hover {
     background-color: var(--glass-white-color);
     border-radius: 0.5rem;
-    transition-duration: 0.5s;
+    transition-duration: 0.1s;
     border-top: 1px solid rgba(255, 255, 255, 0.075);
 }
 
@@ -250,7 +250,7 @@ nav #nav-container {
 
 #second-app-container div:hover {
     background-color: var(--glass-white-color);
-    transition-duration: 0.5s;
+    transition-duration: 0.1s;
 }
 
 #second-app-container img {
@@ -441,7 +441,7 @@ label input {
 
 #widget-section {
     display: grid;
-    grid-template-areas: "meteo calendario" "galleria calendario" "galleria video" "todo traffico";
+    grid-template-areas: "meteo calendario" "galleria calendario" "galleria video" "todo todo";
     gap: 1em;
     grid-auto-columns: 1fr;
     padding: 2em;
@@ -632,8 +632,17 @@ label input {
     }
 }
 
+.on-visible-widget .coming-soon-widget {
+    display: grid;
+    place-self: center;
+    place-items: center;
+    font-size: 1.5em;
+    animation: opacity 2s ease-in-out;
+    height: calc(100% - 40px);
+    transition-duration: 0.5s;
+}
 
-/* @media(max-width:1500px) {
+@media(max-width:1500px) {
     #myVideo {
         transform: translatex(16%);
     }
@@ -667,7 +676,7 @@ label input {
     #myVideo {
         transform: translatex(30%);
     }
-} */
+}
 
 @media(max-width: 800px) {
     #not-mobile-friendly {
