@@ -665,6 +665,16 @@ label input {
     overflow: auto;
 }
 
+.all-height {
+    height: 100% !important;
+    transition-duration: 1s;
+}
+
+.all-width {
+    width: 100% !important;
+    transition-duration: 1s;
+}
+
 .topnavbar-tab {
     height: 2em;
     width: 100%;
