@@ -53,24 +53,22 @@ searchBtn.addEventListener("click", function() {
 
 /* windows moving tab */
 windowsTab.addEventListener("mousedown", function() {
-    isMouseDown = true;
     console.log("mousedown");
+    document.onmousemove = function(e) {
+        var x = e.clientX;
+        var y = e.clientY;
+        windowsTab.style.left = x + "px";
+        windowsTab.style.top = y + "px";
+        console.log("onmousemove\n" + "x:" + x + " y:" + y);
+    }
+});
+
+document.addEventListener("mouseup", function() {
+    document.onmousemove = null;
 });
 
 
-windowsTab.addEventListener("mouseup", function() {
-    isMouseDown = false;
-    console.log("mouseup");
+document.addEventListener("onclick", function() {
+    windowsTab.onmousemove = null;
+    console.log("onclick");
 });
-
-
-
-
-document.onmousemove = function(e) {
-    var x = e.clientX;
-    var y = e.clientY;
-    windowsTab.style.left = x + "px";
-    windowsTab.style.top = y + "px";
-    console.log("onmousemove\n" + "x:" + x + " y:" + y);
-    console.log(windowsTab.onmousedown);
-}
