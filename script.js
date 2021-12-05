@@ -31,8 +31,9 @@ widgetBtn.addEventListener("click", function() {
 /* turn off computer (graficamente) */
 spegniBtn.addEventListener("click", function() {
     spegniContainer.classList.toggle("pc-off")
+    alert("adesso, windows 11 (web edition) \nsi spegnerà virtualmente, \n \n per ritornare alla homepage, \n cliccare qualsiasi punto sullo schermo ");
 });
 
 spegniContainer.addEventListener("click", function() {
-    spegniContainer.classList.toggle("pc-off")
+    spegniContainer.classList.toggle("pc-off");
 });

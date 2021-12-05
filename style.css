@@ -582,23 +582,15 @@ label input {
 
 #spegni-section>div {
     display: grid;
+    animation: rotateParent 2s ease-in-out infinite alternate;
 }
 
-@keyframes rotate {
+@keyframes rotateParent {
     from {
-        transform: rotate(calc(var(--i) * 0deg));
-        opacity: 1;
-        transform-origin: 4em 4em;
-        margin: 0em;
-        background-color: blue;
+        transform: rotate(0deg);
     }
     to {
         transform: rotate(360deg);
-        filter: blur(0.5em);
-        opacity: 0.5;
-        transform-origin: 3em 6em;
-        margin: 0.5em;
-        height: 1.5em;
     }
 }
 
@@ -614,20 +606,29 @@ label input {
     border-radius: 50%;
     margin: 0em;
     transition-duration: 1s;
-    animation: rotate 2s ease-in-out infinite alternate;
+    animation: rotateChild 5s ease-in-out infinite alternate-reverse;
 }
 
 #spegni-section div>div {
     animation-delay: calc(var(--i) * 0.1s);
 }
 
-@keyframes ball-div-animation {
-    0% {
-        transform: translatex(10em) translateY(calc(0em * var(--i)));
-        ;
+@keyframes rotateChild {
+    from {
+        transform: rotate(360deg);
+        opacity: 1;
+        transform-origin: 4em 20em;
+        margin: 0em;
+        background-color: blue;
+        box-shadow: 0 0 10em blue;
     }
-    100% {
-        transform: translatex(0em) translateY(calc(2em * var(--i)));
+    to {
+        transform: rotate(calc(var(--i) * 1deg));
+        filter: blur(0.2em);
+        opacity: 0.5;
+        transform-origin: 15em 2em;
+        margin: 0.5em;
+        height: 1.5em;
     }
 }
 
