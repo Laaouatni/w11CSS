@@ -13,6 +13,7 @@ let searchBtn = document.querySelector('#search-div');
 let searchContainer = document.querySelector("#search-content");
 
 let windowsTab = document.querySelector('#windows-tab');
+isMouseDown = false;
 
 /* from bottom to top WINDOWS START animation */
 startBtn.addEventListener("click", function() {
@@ -44,30 +45,34 @@ spegniContainer.addEventListener("click", function() {
     spegniContainer.classList.toggle("pc-off");
 });
 
-
-/* set display none in the paddingContainer, from clicking the paddingbtn */
+/* SEARCH function in beta */
 searchBtn.addEventListener("click", function() {
     paddingContainer.classList.toggle("not-visible");
     searchContainer.classList.toggle("not-visible");
 });
 
+/* windows moving tab */
 windowsTab.addEventListener("mousedown", function() {
-    if (event.ctrlKey) {
-        console.log("ctrl key is pressed");
-        document.onmousemove = function(e) {
-            var x = e.clientX;
-            var y = e.clientY;
-            windowsTab.style.left = x + "px";
-            windowsTab.style.top = y + "px";
-            console.log("x:" + x + " y:" + y);
-        }
-    } else {
-        document.onmousemove = null;
-        console.log("ctrl key is not pressed");
-    }
+    isMouseDown = true;
     console.log("mousedown");
 });
+
+document.addEventListener("onmousemove", function(e) {
+    console.log("mousemove");
+    if (isMouseDown) {
+        document.onmousemove = function(e) {
+
+        }
+        console.log("if is working");
+        var x = e.clientX;
+        var y = e.clientY;
+        windowsTab.style.left = x + "px";
+        windowsTab.style.top = y + "px";
+        console.log("onmousemove\n" + "x:" + x + " y:" + y);
+    }
+});
+
 windowsTab.addEventListener("mouseup", function() {
-    document.onmousemove = null;
+    isMouseDown = false;
     console.log("mouseup");
 });
