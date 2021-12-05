@@ -51,17 +51,23 @@ searchBtn.addEventListener("click", function() {
     searchContainer.classList.toggle("not-visible");
 });
 
-
-/*only testing*/
-
-/* if i click windowstab, then the windows start moving with the cursor, if the mouse is released the the windowstab stop moving */
-/*after the first stop, the windowstab stops, if clicked the windowstab starts again */
-
-windowsTab.addEventListener("mouseup", function() {
-    document.onmousemove = function(e) {
-        var x = e.clientX;
-        var y = e.clientY;
-        windowsTab.style.marginLeft = x + "px";
-        windowsTab.style.marginTop = y + "px";
+windowsTab.addEventListener("mousedown", function() {
+    if (event.ctrlKey) {
+        console.log("ctrl key is pressed");
+        document.onmousemove = function(e) {
+            var x = e.clientX;
+            var y = e.clientY;
+            windowsTab.style.left = x + "px";
+            windowsTab.style.top = y + "px";
+            console.log("x:" + x + " y:" + y);
+        }
+    } else {
+        document.onmousemove = null;
+        console.log("ctrl key is not pressed");
     }
+    console.log("mousedown");
+});
+windowsTab.addEventListener("mouseup", function() {
+    document.onmousemove = null;
+    console.log("mouseup");
 });

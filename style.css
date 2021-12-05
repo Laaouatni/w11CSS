@@ -651,13 +651,15 @@ label input {
 }
 
 #windows-tab {
-    background-color: blue;
-    height: 300px;
-    width: 300px;
+    border: 2px solid rgba(255, 255, 255, 0.37);
+    height: 200px;
+    backdrop-filter: blur(2em);
+    width: 200px;
     position: absolute;
-    border-radius: 1em;
+    border-radius: 0.5em;
     top: 0;
     left: 0;
+    resize: both;
 }
 
 @media(max-width:1500px) {
