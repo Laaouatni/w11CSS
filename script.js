@@ -57,22 +57,20 @@ windowsTab.addEventListener("mousedown", function() {
     console.log("mousedown");
 });
 
-document.addEventListener("onmousemove", function(e) {
-    console.log("mousemove");
-    if (isMouseDown) {
-        document.onmousemove = function(e) {
-
-        }
-        console.log("if is working");
-        var x = e.clientX;
-        var y = e.clientY;
-        windowsTab.style.left = x + "px";
-        windowsTab.style.top = y + "px";
-        console.log("onmousemove\n" + "x:" + x + " y:" + y);
-    }
-});
 
 windowsTab.addEventListener("mouseup", function() {
     isMouseDown = false;
     console.log("mouseup");
 });
+
+
+
+
+document.onmousemove = function(e) {
+    var x = e.clientX;
+    var y = e.clientY;
+    windowsTab.style.left = x + "px";
+    windowsTab.style.top = y + "px";
+    console.log("onmousemove\n" + "x:" + x + " y:" + y);
+    console.log(windowsTab.onmousedown);
+}
