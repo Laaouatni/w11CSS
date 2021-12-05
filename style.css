@@ -652,14 +652,21 @@ label input {
 
 #windows-tab {
     border: 2px solid rgba(255, 255, 255, 0.37);
-    height: 400px;
+    min-height: 400px;
     backdrop-filter: blur(2em);
-    width: 400px;
+    min-width: 400px;
     position: absolute;
     border-radius: 0.5em;
     top: 0;
     left: 0;
     resize: both;
+    overflow: auto;
+}
+
+.topnavbar-tab {
+    height: 2em;
+    width: 100%;
+    background: white;
 }
 
 @media(max-width:1500px) {

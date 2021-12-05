@@ -13,7 +13,8 @@ let searchBtn = document.querySelector('#search-div');
 let searchContainer = document.querySelector("#search-content");
 
 let windowsTab = document.querySelector('#windows-tab');
-isMouseDown = false;
+
+let topPartTab = document.querySelector('.topnavbar-tab');
 
 /* from bottom to top WINDOWS START animation */
 startBtn.addEventListener("click", function() {
