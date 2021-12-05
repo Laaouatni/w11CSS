@@ -561,7 +561,7 @@ label input {
     min-width: 100%;
     min-height: 100%;
     background-color: black;
-    z-index: 10;
+    z-index: 1000;
     animation: opacity 2s ease-in-out;
 }
 
@@ -582,19 +582,23 @@ label input {
 
 #spegni-section>div {
     display: grid;
-    /* grid-template-columns: auto auto; */
-    animation: rotate 2s ease-in-out infinite alternate-reverse;
 }
 
 @keyframes rotate {
     from {
-        transform: rotate(0deg);
+        transform: rotate(calc(var(--i) * 0deg));
         opacity: 1;
+        transform-origin: 4em 4em;
+        margin: 0em;
+        background-color: blue;
     }
     to {
         transform: rotate(360deg);
         filter: blur(0.5em);
         opacity: 0.5;
+        transform-origin: 3em 6em;
+        margin: 0.5em;
+        height: 1.5em;
     }
 }
 
@@ -603,27 +607,32 @@ label input {
 }
 
 #spegni-section div>div {
+    position: relative;
     background: white;
     height: 1em;
     aspect-ratio: 1;
     border-radius: 50%;
-    margin: 1em;
+    margin: 0em;
     transition-duration: 1s;
-    animation: ball-div-animation 2s ease-in-out infinite alternate-reverse;
+    animation: rotate 2s ease-in-out infinite alternate;
+}
+
+#spegni-section div>div {
+    animation-delay: calc(var(--i) * 0.1s);
 }
 
 @keyframes ball-div-animation {
     0% {
-        background-color: white;
         transform: translatex(10em) translateY(calc(0em * var(--i)));
+        ;
     }
     100% {
         transform: translatex(0em) translateY(calc(2em * var(--i)));
-        background-color: rgb(0, 89, 255);
     }
 }
 
-@media(max-width:1500px) {
+
+/* @media(max-width:1500px) {
     #myVideo {
         transform: translatex(16%);
     }
@@ -657,7 +666,7 @@ label input {
     #myVideo {
         transform: translatex(30%);
     }
-}
+} */
 
 @media(max-width: 800px) {
     #not-mobile-friendly {
