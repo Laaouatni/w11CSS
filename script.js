@@ -12,6 +12,8 @@ let searchBtn = document.querySelector('#search-div');
 
 let searchContainer = document.querySelector("#search-content");
 
+let windowsTab = document.querySelector('#windows-tab');
+
 /* from bottom to top WINDOWS START animation */
 startBtn.addEventListener("click", function() {
     if (widgetContainer.classList.contains("on-visible-widget")) {
@@ -47,4 +49,19 @@ spegniContainer.addEventListener("click", function() {
 searchBtn.addEventListener("click", function() {
     paddingContainer.classList.toggle("not-visible");
     searchContainer.classList.toggle("not-visible");
+});
+
+
+/*only testing*/
+
+/* if i click windowstab, then the windows start moving with the cursor, if the mouse is released the the windowstab stop moving */
+/*after the first stop, the windowstab stops, if clicked the windowstab starts again */
+
+windowsTab.addEventListener("mouseup", function() {
+    document.onmousemove = function(e) {
+        var x = e.clientX;
+        var y = e.clientY;
+        windowsTab.style.marginLeft = x + "px";
+        windowsTab.style.marginTop = y + "px";
+    }
 });

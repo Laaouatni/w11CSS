@@ -650,6 +650,16 @@ label input {
     display: none !important;
 }
 
+#windows-tab {
+    background-color: blue;
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    border-radius: 1em;
+    top: 0;
+    left: 0;
+}
+
 @media(max-width:1500px) {
     #myVideo {
         transform: translatex(16%);
