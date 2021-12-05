@@ -530,7 +530,7 @@ label input {
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-    /* animation: fadeOut-video 5s ease-in; */
+    animation: fadeOut-video 5s ease-in;
     animation-fill-mode: forwards;
     z-index: -1;
 }
@@ -539,7 +539,7 @@ label input {
     0% {
         opacity: 1;
     }
-    80% {
+    70% {
         opacity: 1;
     }
     99% {
