@@ -650,6 +650,8 @@ label input {
     display: none !important;
 }
 
+.visible-only-search-container {}
+
 @media(max-width:1500px) {
     #myVideo {
         transform: translatex(16%);
