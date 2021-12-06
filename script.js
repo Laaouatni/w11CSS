@@ -69,8 +69,3 @@ topPartTab.addEventListener("mousedown", function() {
 document.addEventListener("mouseup", function() {
     document.onmousemove = null;
 });
-
-/* document.addEventListener("mousedown", function() {
-    var xTab = windowsTab.clientHeight;
-    heightTab.style.height = xTab + "px";
-}); */
