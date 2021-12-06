@@ -62,7 +62,7 @@ topPartTab.addEventListener("mousedown", function() {
         var y = e.clientY;
         windowsTab.style.left = x + "px";
         windowsTab.style.top = y + "px";
-        /* console.log("onmousemove\n" + "x:" + x + " y:" + y); */
+        console.log("onmousemove\n" + "x:" + x + " y:" + y);
     }
 });
 
