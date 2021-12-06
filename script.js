@@ -16,6 +16,8 @@ let windowsTab = document.querySelector('#windows-tab');
 
 let topPartTab = document.querySelector('.topnavbar-tab');
 
+let heightTab = document.querySelector('#coming-soon-tab');
+
 /* from bottom to top WINDOWS START animation */
 startBtn.addEventListener("click", function() {
     if (widgetContainer.classList.contains("on-visible-widget")) {
@@ -60,7 +62,7 @@ topPartTab.addEventListener("mousedown", function() {
         var y = e.clientY;
         windowsTab.style.left = x + "px";
         windowsTab.style.top = y + "px";
-        console.log("onmousemove\n" + "x:" + x + " y:" + y);
+        /* console.log("onmousemove\n" + "x:" + x + " y:" + y); */
     }
 });
 
@@ -68,8 +70,7 @@ document.addEventListener("mouseup", function() {
     document.onmousemove = null;
 });
 
-
-document.addEventListener("onclick", function() {
-    windowsTab.onmousemove = null;
-    console.log("onclick");
-});
+/* document.addEventListener("mousedown", function() {
+    var xTab = windowsTab.clientHeight;
+    heightTab.style.height = xTab + "px";
+}); */
