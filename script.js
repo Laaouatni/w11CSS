@@ -18,6 +18,8 @@ let topPartTab = document.querySelector('.topnavbar-tab');
 
 let heightTab = document.querySelector('#coming-soon-tab');
 
+let appIcon = document.querySelector('.app-icon');
+
 /* from bottom to top WINDOWS START animation */
 startBtn.addEventListener("click", function() {
     if (widgetContainer.classList.contains("on-visible-widget")) {
@@ -68,4 +70,9 @@ topPartTab.addEventListener("mousedown", function() {
 
 document.addEventListener("mouseup", function() {
     document.onmousemove = null;
+});
+
+/*beta */
+document.addEventListenerAll("onclick", function() {
+    windowsTab.cloneNode(true);
 });
