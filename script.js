@@ -75,8 +75,8 @@ topPartTab.addEventListener("mousedown", function() {
             windowsTab.style.transitionDuration = "0s";
             windowsTab.style.left = x + "px";
             windowsTab.style.top = y + "px";
-            windowsTab.style.width = "400px";
-            windowsTab.style.height = "400px";
+            /*             windowsTab.style.width = "400px";
+                        windowsTab.style.height = "400px"; */
             windowsTab.style.removeProperty("transform");
         }
         console.log("onmousemove\n" + "x:" + x + " y:" + y + "\n" + "MaxX:" + MaxX);
