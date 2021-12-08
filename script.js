@@ -11,6 +11,7 @@ let paddingContainer = document.querySelector('.padding-start');
 let searchBtn = document.querySelector('#search-div');
 
 let searchContainer = document.querySelector("#search-content");
+let footerStartContainer = document.querySelector('#footer-start-section');
 
 let windowsTab = document.querySelector('.windows-tab');
 
@@ -26,6 +27,8 @@ let appIcon = document.querySelectorAll('.app-icon');
 let nomeTab = document.querySelector('.nome-tab');
 let tabImage = document.querySelector('#tab-image');
 let spanComingSoon = document.querySelector('.coming-soon-span');
+
+let iconNav = document.querySelector("#first-container");
 
 var vh = window.innerHeight / 100;
 var vw = window.innerWidth / 100;
@@ -62,8 +65,9 @@ spegniContainer.addEventListener("click", function() {
 
 /* SEARCH function in beta */
 searchBtn.addEventListener("click", function() {
-    paddingContainer.classList.toggle("not-visible");
-    searchContainer.classList.toggle("not-visible");
+    paddingContainer.style.display = "none";
+    footerStartContainer.style.display = "none";
+    searchContainer.style.display = "grid";
 });
 
 /* windows moving tab */
@@ -98,11 +102,11 @@ document.addEventListener("mouseup", function() {
     document.onmousemove = null;
 });
 
-/*beta */
 for (let i = 0; i < appIcon.length; i++) {
     spanComingSoon.style.display = "grid";
     tabImage.style.display = "none";
     appIcon[i].addEventListener("click", function() {
+        windowsTab.style.display = "grid";
         spanComingSoon.style.display = "none";
         tabImage.style.display = "grid";
         let appName = appIcon[i].querySelector("span").textContent;
@@ -112,6 +116,30 @@ for (let i = 0; i < appIcon.length; i++) {
         tabImage.src = appImage;
     });
 }
+closeBtn.addEventListener("click", function() {
+    windowsTab.style.display = "none";
+});
+
+minBtn.addEventListener("click", function() {
+    windowsTab.style.display = "none";
+    /*add element div with img to iconNav*/
+    let newDivNav = document.createElement("div");
+    let newImageIconNav = document.createElement("img");
+    newImageIconNav.src = tabImage.src;
+    newDivNav.appendChild(newImageIconNav);
+    iconNav.appendChild(newDivNav);
+    console.log("MINIMIZED TAB");
+});
+
+MaxBtn.addEventListener("click", function() {
+    topTab();
+});
+
+startBtn.addEventListener("click", function() {
+    searchContainer.style.display = "none";
+    paddingContainer.style.display = "grid";
+    footerStartContainer.style.display = "flex";
+});
 
 function leftTab() {
     windowsTab.style.left = 0 + "px";

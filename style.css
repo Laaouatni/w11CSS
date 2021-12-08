@@ -169,7 +169,7 @@ nav #nav-container {
     width: 40em;
     border-radius: 1em;
     position: fixed;
-    bottom: calc(-100%);
+    bottom: calc(-150%);
     overflow: hidden;
     border: 2px solid var(--glass-white-color);
     transition-timing-function: cubic-bezier(.4, .01, .15, 1.1);
@@ -671,7 +671,7 @@ label input {
     min-width: 250px;
     width: 400px;
     position: absolute;
-    display: grid;
+    display: none;
     border-radius: 0.5em;
     top: 1px;
     left: 1px;
@@ -722,6 +722,15 @@ label input {
     transition-duration: 0.3s;
     opacity: 1 !important;
     filter: drop-shadow(0 0 0.1em black);
+}
+
+#tab-image {
+    aspect-ratio: 1;
+    width: 50%;
+}
+
+#search-content {
+    height: 40vh;
 }
 
 @media(max-width:1500px) {
