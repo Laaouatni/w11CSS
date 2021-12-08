@@ -744,11 +744,17 @@ label input {
     transform: translateX(150%);
     bottom: calc(var(--nav-height) + 1rem);
     border-radius: 0.5em;
-    background-color: rgba(0, 17, 255, 0.2);
+    background-color: rgba(0, 17, 255, 0.1);
     border: 2px solid var(--glass-white-color);
-    font-size: 2em;
+    font-size: 1.5em;
     color: white;
     transition-duration: 0.2s;
+}
+
+.notification-on {
+    transform: translateX(0%) !important;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(.4, .01, .15, 1.1);
 }
 
 @media(max-width: 1500px) {

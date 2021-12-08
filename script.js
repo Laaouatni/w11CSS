@@ -30,6 +30,7 @@ let spanComingSoon = document.querySelector('.coming-soon-span');
 
 let iconNav = document.querySelector("#first-container");
 
+let notifBtns = document.querySelector('#second-container');
 let notifContainer = document.querySelector("#notification-section");
 
 var vh = window.innerHeight / 100;
@@ -95,7 +96,7 @@ topPartTab.addEventListener("mousedown", function() {
             }
             windowsTab.style.removeProperty("transform");
         }
-        console.log("onmousemove\n" + "x:" + x + " y:" + y + "\n" + "MaxX:" + MaxX);
+        /*  console.log("onmousemove\n" + "x:" + x + " y:" + y + "\n" + "MaxX:" + MaxX); */
     }
 });
 
@@ -136,8 +137,9 @@ MaxBtn.addEventListener("click", function() {
     topTab();
 });
 
-notifContainer.addEventListener("click", function() {
-    notifContainer.
+notifBtns.addEventListener("click", function() {
+    console.log("NOTIF")
+    notifContainer.classList.toggle("notification-on");
 });
 
 function leftTab() {
