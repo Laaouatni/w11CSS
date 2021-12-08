@@ -20,6 +20,7 @@ let heightTab = document.querySelector('.coming-soon-tab');
 
 let appIcon = document.querySelector('.app-icon');
 
+
 /* from bottom to top WINDOWS START animation */
 startBtn.addEventListener("click", function() {
     if (widgetContainer.classList.contains("on-visible-widget")) {
@@ -62,14 +63,28 @@ topPartTab.addEventListener("mousedown", function() {
     document.onmousemove = function(e) {
         var x = e.clientX;
         var y = e.clientY;
+        var MaxX = window.screen.width;
+        /*         switch (x) {
+                    case 0:
+                        rightTab();
+                        break;
+                    case 1:
+
+                    default:
+                        break;
+                } */
         if (x <= 0) {
-            windowsTab.classList.add(".middle-width-all-height");
-            windowsTab.style = "";
+            leftTab();
+        } else if (y <= 2) {
+            topTab();
+        } else if (x >= MaxX) {
+            rightTab();
         } else {
+            windowsTab.style.transitionDuration = "0s";
             windowsTab.style.left = x + "px";
             windowsTab.style.top = y + "px";
         }
-        console.log("onmousemove\n" + "x:" + x + " y:" + y);
+        console.log("onmousemove\n" + "x:" + x + " y:" + y + "\n" + "MaxX:" + MaxX);
     }
 });
 
@@ -81,3 +96,28 @@ document.addEventListener("mouseup", function() {
 appIcon.addEventListenerAll("onclick", function() {
     windowsTab.cloneNode(true);
 });
+
+function leftTab() {
+    windowsTab.style.left = 0 + "px";
+    windowsTab.style.top = 0 + "px";
+    windowsTab.style.width = "50vw";
+    windowsTab.style.height = "calc(100vh - var(--nav-height))";
+    windowsTab.style.transitionDuration = "0.5s";
+    console.log("LEFT TAB");
+}
+
+function topTab() {
+    windowsTab.style.left = 0 + "px";
+    windowsTab.style.top = 0 + "px";
+    windowsTab.style.width = "100vw";
+    windowsTab.style.height = "calc(100vh - var(--nav-height))";
+    console.log("TOP TAB");
+}
+
+function rightTab() {
+    windowsTab.style.right = 0 + "px";
+    windowsTab.style.top = 0 + "px";
+    windowsTab.style.width = "50vw";
+    windowsTab.style.height = "calc(100vh - var(--nav-height))";
+    console.log("RIGHT TAB");
+}
