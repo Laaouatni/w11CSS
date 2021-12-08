@@ -35,12 +35,10 @@ var vw = window.innerWidth / 100;
 
 /* from bottom to top WINDOWS START animation */
 startBtn.addEventListener("click", function() {
-    if (widgetContainer.classList.contains("on-visible-widget")) {
-        widgetContainer.classList.toggle("on-visible-widget");
-        startContainer.classList.toggle("on-visible-start");
-    } else {
-        startContainer.classList.toggle("on-visible-start");
-    }
+    searchContainer.style.display = "none";
+    paddingContainer.style.display = "grid";
+    footerStartContainer.style.display = "flex";
+    openOneWinCloseOther();
 });
 
 /* from bottom to top WINDOWS START animation */
@@ -68,6 +66,7 @@ searchBtn.addEventListener("click", function() {
     paddingContainer.style.display = "none";
     footerStartContainer.style.display = "none";
     searchContainer.style.display = "grid";
+    openOneWinCloseOther();
 });
 
 /* windows moving tab */
@@ -135,12 +134,6 @@ MaxBtn.addEventListener("click", function() {
     topTab();
 });
 
-startBtn.addEventListener("click", function() {
-    searchContainer.style.display = "none";
-    paddingContainer.style.display = "grid";
-    footerStartContainer.style.display = "flex";
-});
-
 function leftTab() {
     windowsTab.style.left = 0 + "px";
     windowsTab.style.top = 0 + "px";
@@ -172,4 +165,13 @@ function rightTab() {
     windowsTab.style.height = "calc(100vh - var(--nav-height))";
     windowsTab.style.transitionDuration = "0.5s";
     console.log("RIGHT TAB");
+}
+
+function openOneWinCloseOther() {
+    if (widgetContainer.classList.contains("on-visible-widget")) {
+        widgetContainer.classList.toggle("on-visible-widget");
+        startContainer.classList.toggle("on-visible-start");
+    } else {
+        startContainer.classList.toggle("on-visible-start");
+    }
 }
