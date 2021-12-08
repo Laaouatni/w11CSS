@@ -16,10 +16,13 @@ let windowsTab = document.querySelector('.windows-tab');
 
 let topPartTab = document.querySelector('.topnavbar-tab');
 
+let closeBtn = document.querySelector("#close-icon");
+let MaxBtn = document.querySelector("#max-icon");
+let minBtn = document.querySelector("#min-icon");
+
 let heightTab = document.querySelector('.coming-soon-tab');
 
-let appIcon = document.querySelector('.app-icon');
-
+let appIcon = document.querySelectorAll('.app-icon');
 
 /* from bottom to top WINDOWS START animation */
 startBtn.addEventListener("click", function() {
@@ -75,8 +78,6 @@ topPartTab.addEventListener("mousedown", function() {
             windowsTab.style.transitionDuration = "0s";
             windowsTab.style.left = x + "px";
             windowsTab.style.top = y + "px";
-            /*             windowsTab.style.width = "400px";
-                        windowsTab.style.height = "400px"; */
             windowsTab.style.removeProperty("transform");
         }
         console.log("onmousemove\n" + "x:" + x + " y:" + y + "\n" + "MaxX:" + MaxX);
@@ -88,9 +89,15 @@ document.addEventListener("mouseup", function() {
 });
 
 /*beta */
-appIcon.addEventListener("onclick", function() {
-    windowsTab.cloneNode(true);
-});
+for (let i = 0; i < appIcon.length; i++) {
+    appIcon[i].addEventListener("click", function() {
+        /*create a copy of element windowsTab*/
+        minBtn.cloneNode(true);
+        /* get the text of the span inside the appicon element */
+        let appName = appIcon[i].querySelector("span").textContent;
+        alert(appName);
+    });
+}
 
 function leftTab() {
     windowsTab.style.left = 0 + "px";
