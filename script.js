@@ -62,10 +62,9 @@ topPartTab.addEventListener("mousedown", function() {
     document.onmousemove = function(e) {
         var x = e.clientX;
         var y = e.clientY;
-        if (x < 0) {
-            windowsTab.style.left = 0 + "px";
-            windowsTab.style.top = 0 + "px";
-            windowsTab.style.height = "100%";
+        if (x <= 0) {
+            windowsTab.classList.add(".middle-width-all-height");
+            windowsTab.style = "";
         } else {
             windowsTab.style.left = x + "px";
             windowsTab.style.top = y + "px";

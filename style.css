@@ -681,10 +681,10 @@ label input {
 }
 
 .middle-width-all-height {
-    height: 100% !important;
-    width: 50%;
-    top: 0;
-    left: 0;
+    height: 100vh !important;
+    width: 50vw !important;
+    top: 0px;
+    left: 0px;
     transition-duration: 1s;
 }
 
