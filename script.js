@@ -64,8 +64,7 @@ topPartTab.addEventListener("mousedown", function() {
         var x = e.clientX;
         var y = e.clientY;
         var MaxWidth = document.documentElement.scrollWidth;
-        var halfTab = windowsTab.scrollWidth / 2;
-        var MaxX = MaxWidth - windowsTab.offsetWidth + halfTab;
+        var MaxX = MaxWidth - windowsTab.offsetWidth;
         if (x <= 0) {
             leftTab();
         } else if (y <= 0) {
@@ -89,7 +88,7 @@ document.addEventListener("mouseup", function() {
 });
 
 /*beta */
-appIcon.addEventListenerAll("onclick", function() {
+appIcon.addEventListener("onclick", function() {
     windowsTab.cloneNode(true);
 });
 
