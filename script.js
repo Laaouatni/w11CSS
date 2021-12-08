@@ -24,6 +24,11 @@ let heightTab = document.querySelector('.coming-soon-tab');
 
 let appIcon = document.querySelectorAll('.app-icon');
 let nomeTab = document.querySelector('.nome-tab');
+let tabImage = document.querySelector('#tab-image');
+let spanComingSoon = document.querySelector('.coming-soon-span');
+
+var vh = window.innerHeight / 100;
+var vw = window.innerWidth / 100;
 
 /* from bottom to top WINDOWS START animation */
 startBtn.addEventListener("click", function() {
@@ -79,11 +84,9 @@ topPartTab.addEventListener("mousedown", function() {
             windowsTab.style.transitionDuration = "0s";
             windowsTab.style.left = x + "px";
             windowsTab.style.top = y + "px";
-            /* translate px in vh*/
-            var vh = window.innerHeight / 100;
             if (windowsTab.offsetHeight > 90 * vh) {
-                alert("la finestra è troppo grande, \nla sua dimensione è: " + windowsTab.offsetHeight + "px" + "\nla dimensione massima è: " + (90 * vh) + "px");
-                windowsTab.style.height = "60vh";
+                /* alert("la finestra è troppo grande, \nla sua dimensione è: " + windowsTab.offsetHeight + "px" + "\nla dimensione massima è: " + (90 * vh) + "px"); */
+                windowsTab.style.height = "50vh";
             }
             windowsTab.style.removeProperty("transform");
         }
@@ -97,11 +100,16 @@ document.addEventListener("mouseup", function() {
 
 /*beta */
 for (let i = 0; i < appIcon.length; i++) {
+    spanComingSoon.style.display = "grid";
+    tabImage.style.display = "none";
     appIcon[i].addEventListener("click", function() {
-        /* get the text of the span inside the appicon element */
+        spanComingSoon.style.display = "none";
+        tabImage.style.display = "grid";
         let appName = appIcon[i].querySelector("span").textContent;
-        /* change the text in nometab using the var appname*/
         nomeTab.textContent = appName;
+        /* get the image from the app icon */
+        let appImage = appIcon[i].querySelector("img").src;
+        tabImage.src = appImage;
     });
 }
 
