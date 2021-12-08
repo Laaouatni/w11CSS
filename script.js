@@ -63,19 +63,12 @@ topPartTab.addEventListener("mousedown", function() {
     document.onmousemove = function(e) {
         var x = e.clientX;
         var y = e.clientY;
-        var MaxX = window.screen.width;
-        /*         switch (x) {
-                    case 0:
-                        rightTab();
-                        break;
-                    case 1:
+        var MaxWidth = document.documentElement.scrollWidth;
+        var MaxX = MaxWidth - windowsTab.offsetWidth;
 
-                    default:
-                        break;
-                } */
         if (x <= 0) {
             leftTab();
-        } else if (y <= 2) {
+        } else if (y <= 0) {
             topTab();
         } else if (x >= MaxX) {
             rightTab();
@@ -83,6 +76,8 @@ topPartTab.addEventListener("mousedown", function() {
             windowsTab.style.transitionDuration = "0s";
             windowsTab.style.left = x + "px";
             windowsTab.style.top = y + "px";
+            windowsTab.style.width = "400px";
+            windowsTab.style.height = "400px";
         }
         console.log("onmousemove\n" + "x:" + x + " y:" + y + "\n" + "MaxX:" + MaxX);
     }
@@ -100,6 +95,7 @@ appIcon.addEventListenerAll("onclick", function() {
 function leftTab() {
     windowsTab.style.left = 0 + "px";
     windowsTab.style.top = 0 + "px";
+    windowsTab.style.removeProperty("right");
     windowsTab.style.width = "50vw";
     windowsTab.style.height = "calc(100vh - var(--nav-height))";
     windowsTab.style.transitionDuration = "0.5s";
@@ -109,15 +105,19 @@ function leftTab() {
 function topTab() {
     windowsTab.style.left = 0 + "px";
     windowsTab.style.top = 0 + "px";
+    windowsTab.style.removeProperty("right");
     windowsTab.style.width = "100vw";
     windowsTab.style.height = "calc(100vh - var(--nav-height))";
+    windowsTab.style.transitionDuration = "0.5s";
     console.log("TOP TAB");
 }
 
 function rightTab() {
     windowsTab.style.right = 0 + "px";
     windowsTab.style.top = 0 + "px";
+    windowsTab.style.removeProperty("left");
     windowsTab.style.width = "50vw";
     windowsTab.style.height = "calc(100vh - var(--nav-height))";
+    windowsTab.style.transitionDuration = "0.5s";
     console.log("RIGHT TAB");
 }
