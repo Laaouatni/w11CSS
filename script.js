@@ -23,6 +23,7 @@ let minBtn = document.querySelector("#min-icon");
 let heightTab = document.querySelector('.coming-soon-tab');
 
 let appIcon = document.querySelectorAll('.app-icon');
+let nomeTab = document.querySelector('.nome-tab');
 
 /* from bottom to top WINDOWS START animation */
 startBtn.addEventListener("click", function() {
@@ -78,6 +79,11 @@ topPartTab.addEventListener("mousedown", function() {
             windowsTab.style.transitionDuration = "0s";
             windowsTab.style.left = x + "px";
             windowsTab.style.top = y + "px";
+            /* check if the height is greater than 90vh*/
+            if (windowsTab.offsetHeight > document.body.offsetHeight) {
+                alert("height is greater than 90vh /n" + windowsTab.offsetHeight + ">" + document.body.offsetHeight);
+                windowsTab.style.height = "75vh";
+            }
             windowsTab.style.removeProperty("transform");
         }
         console.log("onmousemove\n" + "x:" + x + " y:" + y + "\n" + "MaxX:" + MaxX);
@@ -90,12 +96,12 @@ document.addEventListener("mouseup", function() {
 
 /*beta */
 for (let i = 0; i < appIcon.length; i++) {
+    console.log("for loppppppp");
     appIcon[i].addEventListener("click", function() {
-        /*create a copy of element windowsTab*/
-        minBtn.cloneNode(true);
         /* get the text of the span inside the appicon element */
         let appName = appIcon[i].querySelector("span").textContent;
-        alert(appName);
+        /* change the text in nometab using the var appname*/
+        nomeTab.textContent = appName;
     });
 }
 
