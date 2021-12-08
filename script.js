@@ -12,11 +12,11 @@ let searchBtn = document.querySelector('#search-div');
 
 let searchContainer = document.querySelector("#search-content");
 
-let windowsTab = document.querySelector('#windows-tab');
+let windowsTab = document.querySelector('.windows-tab');
 
 let topPartTab = document.querySelector('.topnavbar-tab');
 
-let heightTab = document.querySelector('#coming-soon-tab');
+let heightTab = document.querySelector('.coming-soon-tab');
 
 let appIcon = document.querySelector('.app-icon');
 
@@ -73,6 +73,6 @@ document.addEventListener("mouseup", function() {
 });
 
 /*beta */
-document.addEventListenerAll("onclick", function() {
+appIcon.addEventListenerAll("onclick", function() {
     windowsTab.cloneNode(true);
 });

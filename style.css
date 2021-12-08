@@ -647,7 +647,7 @@ label input {
     transition-duration: 0.5s;
 }
 
-#coming-soon-tab {
+.coming-soon-tab {
     display: grid;
     place-self: center;
     place-items: center;
@@ -663,7 +663,7 @@ label input {
     display: none !important;
 }
 
-#windows-tab {
+.windows-tab {
     border: 2px solid rgba(255, 255, 255, 0.37);
     min-height: 250px;
     height: 400px;
