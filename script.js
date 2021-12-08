@@ -64,8 +64,8 @@ topPartTab.addEventListener("mousedown", function() {
         var x = e.clientX;
         var y = e.clientY;
         var MaxWidth = document.documentElement.scrollWidth;
-        var MaxX = MaxWidth - windowsTab.offsetWidth;
-
+        var halfTab = windowsTab.scrollWidth / 2;
+        var MaxX = MaxWidth - windowsTab.offsetWidth + halfTab;
         if (x <= 0) {
             leftTab();
         } else if (y <= 0) {
@@ -78,6 +78,7 @@ topPartTab.addEventListener("mousedown", function() {
             windowsTab.style.top = y + "px";
             windowsTab.style.width = "400px";
             windowsTab.style.height = "400px";
+            windowsTab.style.removeProperty("transform");
         }
         console.log("onmousemove\n" + "x:" + x + " y:" + y + "\n" + "MaxX:" + MaxX);
     }
@@ -96,6 +97,7 @@ function leftTab() {
     windowsTab.style.left = 0 + "px";
     windowsTab.style.top = 0 + "px";
     windowsTab.style.removeProperty("right");
+    windowsTab.style.removeProperty("transform");
     windowsTab.style.width = "50vw";
     windowsTab.style.height = "calc(100vh - var(--nav-height))";
     windowsTab.style.transitionDuration = "0.5s";
@@ -106,6 +108,7 @@ function topTab() {
     windowsTab.style.left = 0 + "px";
     windowsTab.style.top = 0 + "px";
     windowsTab.style.removeProperty("right");
+    windowsTab.style.removeProperty("transform");
     windowsTab.style.width = "100vw";
     windowsTab.style.height = "calc(100vh - var(--nav-height))";
     windowsTab.style.transitionDuration = "0.5s";
@@ -113,9 +116,10 @@ function topTab() {
 }
 
 function rightTab() {
-    windowsTab.style.right = 0 + "px";
+    windowsTab.style.transform = "translateX(99%)";
+    windowsTab.style.left = 0 + "px";
     windowsTab.style.top = 0 + "px";
-    windowsTab.style.removeProperty("left");
+    windowsTab.style.removeProperty("right");
     windowsTab.style.width = "50vw";
     windowsTab.style.height = "calc(100vh - var(--nav-height))";
     windowsTab.style.transitionDuration = "0.5s";
