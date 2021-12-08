@@ -680,8 +680,11 @@ label input {
     background-color: rgba(0, 0, 0, 0.2)
 }
 
-.all-height {
+.middle-width-all-height {
     height: 100% !important;
+    width: 50%;
+    top: 0;
+    left: 0;
     transition-duration: 1s;
 }
 

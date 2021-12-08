@@ -62,8 +62,14 @@ topPartTab.addEventListener("mousedown", function() {
     document.onmousemove = function(e) {
         var x = e.clientX;
         var y = e.clientY;
-        windowsTab.style.left = x + "px";
-        windowsTab.style.top = y + "px";
+        if (x < 0) {
+            windowsTab.style.left = 0 + "px";
+            windowsTab.style.top = 0 + "px";
+            windowsTab.style.height = "100%";
+        } else {
+            windowsTab.style.left = x + "px";
+            windowsTab.style.top = y + "px";
+        }
         console.log("onmousemove\n" + "x:" + x + " y:" + y);
     }
 });
