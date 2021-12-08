@@ -30,6 +30,8 @@ let spanComingSoon = document.querySelector('.coming-soon-span');
 
 let iconNav = document.querySelector("#first-container");
 
+let notifContainer = document.querySelector("#notification-section");
+
 var vh = window.innerHeight / 100;
 var vw = window.innerWidth / 100;
 
@@ -132,6 +134,10 @@ minBtn.addEventListener("click", function() {
 
 MaxBtn.addEventListener("click", function() {
     topTab();
+});
+
+notifContainer.addEventListener("click", function() {
+    notifContainer.
 });
 
 function leftTab() {

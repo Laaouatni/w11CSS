@@ -733,7 +733,25 @@ label input {
     height: 40vh;
 }
 
-@media(max-width:1500px) {
+#notification-section {
+    display: grid;
+    place-content: center;
+    height: 30vh;
+    width: 30vh;
+    backdrop-filter: blur(3em);
+    position: fixed;
+    right: 1rem;
+    transform: translateX(150%);
+    bottom: calc(var(--nav-height) + 1rem);
+    border-radius: 0.5em;
+    background-color: rgba(0, 17, 255, 0.2);
+    border: 2px solid var(--glass-white-color);
+    font-size: 2em;
+    color: white;
+    transition-duration: 0.2s;
+}
+
+@media(max-width: 1500px) {
     #myVideo {
         transform: translatex(16%);
     }
