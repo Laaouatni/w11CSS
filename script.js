@@ -79,10 +79,11 @@ topPartTab.addEventListener("mousedown", function() {
             windowsTab.style.transitionDuration = "0s";
             windowsTab.style.left = x + "px";
             windowsTab.style.top = y + "px";
-            /* check if the height is greater than 90vh*/
-            if (windowsTab.offsetHeight > document.body.offsetHeight) {
-                alert("height is greater than 90vh /n" + windowsTab.offsetHeight + ">" + document.body.offsetHeight);
-                windowsTab.style.height = "75vh";
+            /* translate px in vh*/
+            var vh = window.innerHeight / 100;
+            if (windowsTab.offsetHeight > 90 * vh) {
+                alert("la finestra è troppo grande, \nla sua dimensione è: " + windowsTab.offsetHeight + "px" + "\nla dimensione massima è: " + (90 * vh) + "px");
+                windowsTab.style.height = "60vh";
             }
             windowsTab.style.removeProperty("transform");
         }
@@ -96,7 +97,6 @@ document.addEventListener("mouseup", function() {
 
 /*beta */
 for (let i = 0; i < appIcon.length; i++) {
-    console.log("for loppppppp");
     appIcon[i].addEventListener("click", function() {
         /* get the text of the span inside the appicon element */
         let appName = appIcon[i].querySelector("span").textContent;
