@@ -800,7 +800,31 @@ label input {
     }
 }
 
-@media(max-height: 960px) {
+@media(max-height: 950px) {
+    #article-container>:nth-child(-n+2) {
+        display: none;
+    }
+}
+
+@media (max-height: 850px) {
+    #article-container>:nth-child(-n+4) {
+        display: none;
+    }
+}
+
+@media (max-height: 750px) {
+    #article-div {
+        display: none;
+    }
+}
+
+@media (max-height: 650px) {
+    #widget-section .coming-soon-widget {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-height: 600px) {
     #not-mobile-friendly {
         display: grid;
     }
