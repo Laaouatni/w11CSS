@@ -12,5 +12,6 @@ online website: https://laaouatni.github.io/w11-clone/
 ![navbar windows 11 html css clone](https://user-images.githubusercontent.com/87947051/145670732-259b9747-22e0-45e9-9c8e-b534341875fd.png)
 ![all height tab windows 11 clone](https://user-images.githubusercontent.com/87947051/145670904-df8eb745-e670-4a82-b04d-1980ec501bbc.png)
 
-# problems
+# DO you have problems?
+## here the solutions
 - DISPOSITIVO NON SOPPORTATO SCHERMATA -> `CTRL` + `-`
