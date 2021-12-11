@@ -1,6 +1,7 @@
 
 # Windows-11-Clone
-https://laaouatni.github.io/w11-clone/
+
+online website: https://laaouatni.github.io/w11-clone/
 
 ![windows 11 interfaccia clone](https://user-images.githubusercontent.com/87947051/145460305-997d42b9-3b7d-49e9-8da3-1d4e15563b66.png)
 ![windows 11 start section clone](https://user-images.githubusercontent.com/87947051/145460298-84d0d60b-c15e-4639-9525-a0e2dd5ddf51.png)
@@ -11,3 +12,5 @@ https://laaouatni.github.io/w11-clone/
 ![navbar windows 11 html css clone](https://user-images.githubusercontent.com/87947051/145670732-259b9747-22e0-45e9-9c8e-b534341875fd.png)
 ![all height tab windows 11 clone](https://user-images.githubusercontent.com/87947051/145670904-df8eb745-e670-4a82-b04d-1980ec501bbc.png)
 
+# problems
+- DISPOSITIVO NON SOPPORTATO SCHERMATA -> `CTRL` + `-`
