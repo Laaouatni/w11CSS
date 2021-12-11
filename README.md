@@ -1,8 +1,6 @@
 # Windows-11-Clone
 https://laaouatni.github.io/w11-clone/
 
-[![wakatime](https://wakatime.com/badge/user/350b968c-4c68-4401-ad27-cb1cae388bbf/project/1fd46384-2161-4cf8-8f42-5df4dc2f6ce0.svg)](https://wakatime.com/badge/user/350b968c-4c68-4401-ad27-cb1cae388bbf/project/1fd46384-2161-4cf8-8f42-5df4dc2f6ce0)
-
 ![1-windows](https://user-images.githubusercontent.com/87947051/145460305-997d42b9-3b7d-49e9-8da3-1d4e15563b66.png)
 ![2-windows](https://user-images.githubusercontent.com/87947051/145460298-84d0d60b-c15e-4639-9525-a0e2dd5ddf51.png)
 ![3-windows](https://user-images.githubusercontent.com/87947051/145460294-80e07f69-d55b-4ee9-8de9-ca66641beefe.png)
