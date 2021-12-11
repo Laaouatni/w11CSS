@@ -29,7 +29,7 @@ https://laaouatni.github.io/w11-clone/
 #### **all_screen** snap
 ![all height tab windows 11 clone](https://user-images.githubusercontent.com/87947051/145670904-df8eb745-e670-4a82-b04d-1980ec501bbc.png)
 
-### if window minimized, the icon is in NavBar
+### if window minimized, the icon is in NavBar (all this is centered automatically)
 ![navbar windows 11 html css clone](https://user-images.githubusercontent.com/87947051/145670732-259b9747-22e0-45e9-9c8e-b534341875fd.png)
 
 
