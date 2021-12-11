@@ -31,8 +31,3 @@ https://laaouatni.github.io/w11-clone/
 
 ### if window minimized, the icon is in NavBar (all this is centered automatically)
 ![navbar windows 11 html css clone](https://user-images.githubusercontent.com/87947051/145670732-259b9747-22e0-45e9-9c8e-b534341875fd.png)
-
-
-## DO you have problems?
-### here the solutions
-- DISPOSITIVO NON SOPPORTATO SCHERMATA -> `CTRL` + `-` or see in full-screen 
