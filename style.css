@@ -398,7 +398,8 @@ label input {
 }
 
 #first-container>div[title]:hover::after,
-#sistema-info>div[title]:hover::after {
+#sistema-info>div[title]:hover::after,
+#sistema-data[title]:hover::after {
     content: attr(title);
     color: white;
     position: absolute;
