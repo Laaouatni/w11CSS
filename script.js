@@ -274,26 +274,40 @@ function getDate() {
     let giorno = DataAttuale.getDate();
     let mese = DataAttuale.getMonth() + 1;
     let anno = DataAttuale.getFullYear();
+
     let ora = DataAttuale.getHours();
     let minuti = DataAttuale.getMinutes();
-    /* let secondi = DataAttuale.getSeconds(); */
 
     let orarioContainer = document.getElementById("orario-data");
     let calendarioContainer = document.getElementById("calendario-data");
 
+    if (ora < 10 && minuti < 10) {
+        orarioContainer.innerHTML = "0" + ora + ":" + "0" + minuti;
+    } else
     if (ora < 10) {
         orarioContainer.innerHTML = "0" + ora + ":" + minuti;
     } else
-    if (ora < 10 && minuti < 10) {
-        orarioContainer.innerHTML = "0" + ora + ":" + "0" + minuti;
-    } else if (giorno < 10) {
-        calendarioContainer.innerHTML = "0" + giorno + "/" + mese + "/" + anno;
-    } else if (mese < 10) {
-        calendarioContainer.innerHTML = giorno + "/" + "0" + mese + "/" + anno;
-    } else if (giorno < 10 && mese < 10) {
-        calendarioContainer.innerHTML = "0" + giorno + "/" + "0" + mese + "/" + anno;
+    if (minuti < 10) {
+        orarioContainer.innerHTML = ora + ":" + "0" + minuti;
     } else {
-
+        orarioContainer.innerHTML = ora + ":" + minuti;
     }
+
+    if (giorno < 10 && mese < 10) {
+        calendarioContainer.innerHTML = "0" + giorno + "/" + "0" + mese + "/" + anno;
+    } else
+    if (giorno < 10) {
+        calendarioContainer.innerHTML = "0" + giorno + "/" + mese + "/" + anno;
+    } else
+    if (mese < 10) {
+        calendarioContainer.innerHTML = giorno + "/" + "0" + mese + "/" + anno;
+    } else {
+        calendarioContainer.innerHTML = giorno + "/" + mese + "/" + anno;
+    }
+
+    setTimeout(function() {
+        getDate();
+    }, 1000);
+
 }
 getDate();
