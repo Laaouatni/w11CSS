@@ -698,19 +698,18 @@ label input {
 .topnavbar-tab {
     height: 2em;
     width: 100%;
-    background: rgb(255, 255, 255);
+    background: #202020;
     display: grid;
     place-items: center;
     grid-auto-flow: column;
     grid-template-columns: 1fr auto;
+    color: white;
 }
 
 .top-left-menu-tab {
     display: grid;
     place-items: center;
     grid-auto-flow: column;
-    gap: 0.5em;
-    padding-right: 1em;
 }
 
 .top-left-menu-tab svg {
@@ -724,6 +723,21 @@ label input {
     transition-duration: 0.3s;
     opacity: 1 !important;
     filter: drop-shadow(0 0 0.1em black);
+}
+
+.top-left-menu-tab div {
+    height: 2em;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+}
+
+.top-left-menu-tab div:hover {
+    background-color: var(--glass-white-color);
+}
+
+.top-left-menu-tab div:nth-child(3):hover {
+    background-color: rgb(255, 0, 25);
 }
 
 #tab-image {
