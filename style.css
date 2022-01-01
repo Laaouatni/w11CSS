@@ -835,10 +835,9 @@ label input {
 /* new code in beta */
 
 #div {
-    border: 1px solid var(--bottom-border-color-search);
-    background: #9dcae33c;
+    border: 1px solid #1d75fe;
+    background: #1d73fe38;
     display: none;
     position: absolute;
     border-radius: 0.2em;
-    /*     box-shadow: 0 0 1rem #9dcae33c; */
 }
