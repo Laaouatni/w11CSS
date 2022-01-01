@@ -197,12 +197,28 @@ function openOneWinCloseOther() {
 }
 
 /* new code in beta */
-function dragSelector() {
+function dragSelectorLogic() {
 
     document.addEventListener("mousedown", function(e1) {
+
         if (windowsTab.style.display == "grid") {
             console.log("yessss risolto il bug!!!")
         } else {
+            if (e1.target.closest("#w11-start-section") != startContainer && startContainer.classList.contains("on-visible-start")) {
+                startContainer.classList.toggle("on-visible-start");
+                dragSelectorCode();
+            } else if (e1.target.closest("#widget-section") != widgetContainer && widgetContainer.classList.contains("on-visible-widget")) {
+                widgetContainer.classList.toggle("on-visible-widget");
+                dragSelectorCode();
+            } else if (e1.target.closest("#notification-section") != notifContainer && notifContainer.classList.contains("notification-on")) {
+                notifContainer.classList.toggle("notification-on");
+                dragSelectorCode();
+            } else {
+                dragSelectorCode();
+            }
+        }
+
+        function dragSelectorCode() {
             div.style.display = "block";
 
             div.style.width = 0 + "px";
@@ -249,4 +265,4 @@ function dragSelector() {
     });
 }
 
-dragSelector();
+dragSelectorLogic();
