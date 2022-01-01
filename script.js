@@ -28,6 +28,7 @@ let nomeTab = document.querySelector('.nome-tab');
 let tabImage = document.querySelector('#tab-image');
 let spanComingSoon = document.querySelector('.coming-soon-span');
 
+let nav = document.querySelector('nav');
 let iconNav = document.querySelector("#first-container");
 
 let notifBtns = document.querySelector('#second-container');
@@ -46,7 +47,7 @@ let firstPositionY;
 let lastPositionX;
 let lastPositionY;
 
-/* from bottom to top WINDOWS START animation */
+// from bottom to top WINDOWS START animation 
 startBtn.addEventListener("click", function() {
     searchContainer.style.display = "none";
     paddingContainer.style.display = "grid";
@@ -54,7 +55,7 @@ startBtn.addEventListener("click", function() {
     openOneWinCloseOther();
 });
 
-/* from bottom to top WINDOWS START animation */
+// from bottom to top WINDOWS START animation
 widgetBtn.addEventListener("click", function() {
     if (startContainer.classList.contains("on-visible-start")) {
         startContainer.classList.toggle("on-visible-start");
@@ -64,7 +65,7 @@ widgetBtn.addEventListener("click", function() {
     }
 });
 
-/* turn off computer (graficamente e virtualmente) */
+// turn off computer (graficamente e virtualmente) 
 spegniBtn.addEventListener("click", function() {
     spegniContainer.classList.toggle("pc-off");
     alert("adesso, windows 11 (web edition) \nsi spegnerà virtualmente, \n \nper ritornare alla homepage, \ncliccare qualsiasi punto sullo schermo!");
@@ -74,7 +75,7 @@ spegniContainer.addEventListener("click", function() {
     spegniContainer.classList.toggle("pc-off");
 });
 
-/* SEARCH function in beta */
+// SEARCH function in beta 
 searchBtn.addEventListener("click", function() {
     paddingContainer.style.display = "none";
     footerStartContainer.style.display = "none";
@@ -82,7 +83,7 @@ searchBtn.addEventListener("click", function() {
     openOneWinCloseOther();
 });
 
-/* windows moving tab */
+// windows moving tab 
 topPartTab.addEventListener("mousedown", function() {
 
     isTopBarClicked = true;
@@ -112,7 +113,7 @@ topPartTab.addEventListener("mousedown", function() {
 
 });
 
-/* non mouve più la tab, quando non è necessario */
+// non mouve più la tab, quando non è necessario
 document.addEventListener("mouseup", function() {
     document.onmousemove = null;
 });
@@ -216,17 +217,25 @@ function dragSelectorLogic() {
             // se la tab è visibile, allora la funzione NON è attiva
         } else {
             // se START è visibile, allora si chiude in automatico
-            if (e1.target.closest("#w11-start-section") != startContainer && startContainer.classList.contains("on-visible-start")) {
+            if (e1.target.closest("#w11-start-section") != startContainer && startContainer.classList.contains("on-visible-start") && e1.target.closest("nav") != nav) {
                 startContainer.classList.remove("on-visible-start");
                 dragSelectorCode();
             } // se WIDGET è visibile, allora si chiude in automatico
-            else if (e1.target.closest("#widget-section") != widgetContainer && widgetContainer.classList.contains("on-visible-widget")) {
+            else if (e1.target.closest("#widget-section") != widgetContainer && widgetContainer.classList.contains("on-visible-widget") && e1.target.closest("nav") != nav) {
                 widgetContainer.classList.remove("on-visible-widget");
                 dragSelectorCode();
             } // se NOTIFICHE è visibile, allora si chiude in automatico 
-            else if (e1.target.closest("#notification-section") != notifContainer && notifContainer.classList.contains("notification-on")) {
+            else if (e1.target.closest("#notification-section") != notifContainer && notifContainer.classList.contains("notification-on") && e1.target.closest("nav") != nav) {
                 notifContainer.classList.remove("notification-on");
                 dragSelectorCode();
+            }
+            /* qui serve per risolvere il BUG "apri chiudi" quando si clicca un icona nella navigazione,
+               perchè la funzione dragSelector utilliza .remove() per togliere le sezioni, 
+               ma il buttone della nav utilizza .add() per aggiungere le sezioni... 
+               il problema che si chiude e si riapre appendendo le sezioni
+            */
+            else if ( && e1.target.closest("nav") == nav) {
+                alert("cliccato");
             } // se non c'è nessuna finestra visibile, allora prosegue tranquillamente
             else {
                 dragSelectorCode();
