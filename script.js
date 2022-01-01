@@ -228,16 +228,7 @@ function dragSelectorLogic() {
             else if (e1.target.closest("#notification-section") != notifContainer && notifContainer.classList.contains("notification-on") && e1.target.closest("nav") != nav) {
                 notifContainer.classList.remove("notification-on");
                 dragSelectorCode();
-            }
-            /* qui serve per risolvere il BUG "apri chiudi" quando si clicca un icona nella navigazione,
-               perchè la funzione dragSelector utilliza .remove() per togliere le sezioni, 
-               ma il buttone della nav utilizza .add() per aggiungere le sezioni... 
-               il problema che si chiude e si riapre appendendo le sezioni
-            */
-            else if ( && e1.target.closest("nav") == nav) {
-                alert("cliccato");
-            } // se non c'è nessuna finestra visibile, allora prosegue tranquillamente
-            else {
+            } else {
                 dragSelectorCode();
             }
         }
