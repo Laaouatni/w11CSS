@@ -829,3 +829,15 @@ label input {
         display: grid;
     }
 }
+
+
+/* new code in beta */
+
+#div {
+    border: 1px solid var(--bottom-border-color-search);
+    background: #9dcae33c;
+    display: none;
+    position: absolute;
+    border-radius: 0.2em;
+    /*     box-shadow: 0 0 1rem #9dcae33c; */
+}

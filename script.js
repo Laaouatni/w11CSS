@@ -36,6 +36,16 @@ let notifContainer = document.querySelector("#notification-section");
 var vh = window.innerHeight / 100;
 var vw = window.innerWidth / 100;
 
+let isTopBarClicked = false;
+
+let div = document.querySelector("#div");
+
+let firstPositionX;
+let firstPositionY;
+
+let lastPositionX;
+let lastPositionY;
+
 /* from bottom to top WINDOWS START animation */
 startBtn.addEventListener("click", function() {
     searchContainer.style.display = "none";
@@ -74,6 +84,8 @@ searchBtn.addEventListener("click", function() {
 
 /* windows moving tab */
 topPartTab.addEventListener("mousedown", function() {
+
+    isTopBarClicked = true;
     console.log("mousedown");
     document.onmousemove = function(e) {
         var x = e.clientX;
@@ -91,17 +103,17 @@ topPartTab.addEventListener("mousedown", function() {
             windowsTab.style.left = x + "px";
             windowsTab.style.top = y + "px";
             if (windowsTab.offsetHeight > 90 * vh) {
-                /* alert("la finestra è troppo grande, \nla sua dimensione è: " + windowsTab.offsetHeight + "px" + "\nla dimensione massima è: " + (90 * vh) + "px"); */
-                windowsTab.style.height = "50vh";
+                windowsTab.style.height = "70vh";
             }
             windowsTab.style.removeProperty("transform");
         }
-        /*  console.log("onmousemove\n" + "x:" + x + " y:" + y + "\n" + "MaxX:" + MaxX); */
     }
+
 });
 
 document.addEventListener("mouseup", function() {
     document.onmousemove = null;
+
 });
 
 for (let i = 0; i < appIcon.length; i++) {
@@ -183,3 +195,58 @@ function openOneWinCloseOther() {
         startContainer.classList.toggle("on-visible-start");
     }
 }
+
+/* new code in beta */
+function dragSelector() {
+
+    document.addEventListener("mousedown", function(e1) {
+        if (windowsTab.style.display == "grid") {
+            console.log("yessss risolto il bug!!!")
+        } else {
+            div.style.display = "block";
+
+            div.style.width = 0 + "px";
+            div.style.height = 0 + "px";
+
+            firstPositionX = e1.clientX;
+            firstPositionY = e1.clientY;
+
+            div.style.top = firstPositionY + "px";
+            div.style.left = firstPositionX + "px";
+
+            div.style.transition = "none";
+
+            document.addEventListener("mousemove", function(e2) {
+                lastPositionX = e2.clientX;
+                lastPositionY = e2.clientY;
+
+                if ((firstPositionX - lastPositionX) < 0) {
+                    div.style.width = Math.round(lastPositionX - firstPositionX) + "px";
+                } else {
+                    div.style.width = Math.round(firstPositionX - lastPositionX) + "px";
+                    div.style.left = lastPositionX + "px";
+                }
+
+                if ((firstPositionY - lastPositionY) < 0) {
+                    div.style.height = Math.round(lastPositionY - firstPositionY) + "px";
+                } else {
+                    div.style.height = Math.round(firstPositionY - lastPositionY) + "px";
+                    div.style.top = lastPositionY + "px";
+                }
+
+            });
+
+            document.addEventListener("mouseup", function() {
+                div.style.width = "0px";
+                div.style.height = "0px";
+                div.style.transition = "all 0.3s";
+
+                setTimeout(function() {
+                    div.style.display = "none";
+                }, 300);
+            });
+        }
+    });
+}
+
+dragSelector();
