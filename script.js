@@ -306,7 +306,7 @@ function getDate() {
 
     setTimeout(function() {
         getDate();
-    }, 1000);
+    }, 60000); // 60 secondi
 
 }
 
