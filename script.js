@@ -228,6 +228,8 @@ function dragSelectorLogic() {
             else if (e1.target.closest("#notification-section") != notifContainer && notifContainer.classList.contains("notification-on") && e1.target.closest("nav") != nav) {
                 notifContainer.classList.remove("notification-on");
                 dragSelectorCode();
+            } else if (e1.target.closest("#w11-start-section") == startContainer || e1.target.closest("#notification-section") == notifContainer || e1.target.closest("#widget-section") == widgetContainer) {
+                console.log("You can't drag the tab here!");
             } else {
                 dragSelectorCode();
             }
@@ -281,6 +283,7 @@ function dragSelectorLogic() {
                 div.style.height = "0px";
                 div.style.transition = "all 0.3s";
 
+                // aspetta che prima finisca l'animazione poi rimuove il selezionatore
                 setTimeout(function() {
                     div.style.display = "none";
                 }, 300);
