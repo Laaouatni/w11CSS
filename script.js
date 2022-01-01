@@ -266,3 +266,15 @@ function dragSelectorLogic() {
 }
 
 dragSelectorLogic();
+
+
+function getDate() {
+    let DataAttuale = new Date();
+    let giorno = DataAttuale.getDate();
+    let mese = DataAttuale.getMonth() + 1;
+    let anno = DataAttuale.getFullYear();
+    let ora = DataAttuale.getHours();
+    let minuti = DataAttuale.getMinutes();
+    let secondi = DataAttuale.getSeconds();
+}
+getDate();
