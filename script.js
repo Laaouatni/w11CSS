@@ -92,6 +92,7 @@ topPartTab.addEventListener("mousedown", function() {
         var y = e.clientY;
         var MaxWidth = document.documentElement.scrollWidth;
         var MaxX = MaxWidth - windowsTab.offsetWidth;
+
         if (x <= 0) {
             leftTab();
         } else if (y <= 0) {
@@ -111,10 +112,11 @@ topPartTab.addEventListener("mousedown", function() {
 
 });
 
+/* non mouve più la tab, quando non è necessario */
 document.addEventListener("mouseup", function() {
     document.onmousemove = null;
-
 });
+
 
 for (let i = 0; i < appIcon.length; i++) {
     spanComingSoon.style.display = "grid";
@@ -130,10 +132,14 @@ for (let i = 0; i < appIcon.length; i++) {
         tabImage.src = appImage;
     });
 }
+
+// buttone per cancellare la tab (nascondere la tab)
 closeBtn.addEventListener("click", function() {
     windowsTab.style.display = "none";
 });
 
+
+// crea un icona nella nav, e nasconde la tab
 minBtn.addEventListener("click", function() {
     windowsTab.style.display = "none";
     /*add element div with img to iconNav*/
@@ -145,14 +151,16 @@ minBtn.addEventListener("click", function() {
     console.log("MINIMIZED TAB");
 });
 
+// ingrandisce la tab a seconda delle dimensioni dello schermo
 MaxBtn.addEventListener("click", function() {
     topTab();
 });
 
+// per aprire le notifiche
 notifBtns.addEventListener("click", function() {
-    console.log("NOTIF")
     notifContainer.classList.toggle("notification-on");
 });
+
 
 function leftTab() {
     windowsTab.style.left = 0 + "px";
@@ -187,6 +195,8 @@ function rightTab() {
     console.log("RIGHT TAB");
 }
 
+
+// funzione per aprire una finestra e chiuderne l'altra (se c'è)
 function openOneWinCloseOther() {
     if (widgetContainer.classList.contains("on-visible-widget")) {
         widgetContainer.classList.toggle("on-visible-widget");
@@ -196,29 +206,35 @@ function openOneWinCloseOther() {
     }
 }
 
-/* new code in beta */
+// crea un selezionatore provissorio a seconda della tua posizione del mouse
 function dragSelectorLogic() {
 
+    // tutta la funzione inizia dopo il mouse è cliccato
     document.addEventListener("mousedown", function(e1) {
 
         if (windowsTab.style.display == "grid") {
-            console.log("yessss risolto il bug!!!")
+            // se la tab è visibile, allora la funzione NON è attiva
         } else {
+            // se START è visibile, allora si chiude in automatico
             if (e1.target.closest("#w11-start-section") != startContainer && startContainer.classList.contains("on-visible-start")) {
                 startContainer.classList.remove("on-visible-start");
                 dragSelectorCode();
-            } else if (e1.target.closest("#widget-section") != widgetContainer && widgetContainer.classList.contains("on-visible-widget")) {
+            } // se WIDGET è visibile, allora si chiude in automatico
+            else if (e1.target.closest("#widget-section") != widgetContainer && widgetContainer.classList.contains("on-visible-widget")) {
                 widgetContainer.classList.remove("on-visible-widget");
                 dragSelectorCode();
-            } else if (e1.target.closest("#notification-section") != notifContainer && notifContainer.classList.contains("notification-on")) {
+            } // se NOTIFICHE è visibile, allora si chiude in automatico 
+            else if (e1.target.closest("#notification-section") != notifContainer && notifContainer.classList.contains("notification-on")) {
                 notifContainer.classList.remove("notification-on");
                 dragSelectorCode();
-            } else {
+            } // se non c'è nessuna finestra visibile, allora prosegue tranquillamente
+            else {
                 dragSelectorCode();
             }
         }
 
         function dragSelectorCode() {
+            // preseting del selezionatore
             div.style.display = "block";
 
             div.style.width = 0 + "px";
@@ -236,22 +252,30 @@ function dragSelectorLogic() {
                 lastPositionX = e2.clientX;
                 lastPositionY = e2.clientY;
 
+                // se la posizione X del mouse è cambiata, allora si aggiorna la posizione del selezionatore
+                // ingrandisce il selezionatore
                 if ((firstPositionX - lastPositionX) < 0) {
                     div.style.width = Math.round(lastPositionX - firstPositionX) + "px";
-                } else {
+                } // sposta il selezionatore, ma visivamente lo ingrandisce a sinistra (è un trick interressante)
+                else {
                     div.style.width = Math.round(firstPositionX - lastPositionX) + "px";
                     div.style.left = lastPositionX + "px";
                 }
 
+                // se la posizione Y del mouse è cambiata, allora si aggiorna la posizione del selezionatore
+                // ingrandisce il selezionatore
                 if ((firstPositionY - lastPositionY) < 0) {
                     div.style.height = Math.round(lastPositionY - firstPositionY) + "px";
-                } else {
+                } // sposta il selezionatore, ma visivamente lo ingrandisce in alto (è un trick interressante)
+                else {
                     div.style.height = Math.round(firstPositionY - lastPositionY) + "px";
                     div.style.top = lastPositionY + "px";
                 }
-
             });
 
+            // una volta che non si clicca più, si chiude il selezionatore
+            // resettando prima con un'animazione
+            // poi togliendo il selezionatore (che è un div invisibile)
             document.addEventListener("mouseup", function() {
                 div.style.width = "0px";
                 div.style.height = "0px";
@@ -265,11 +289,13 @@ function dragSelectorLogic() {
     });
 }
 
+
+// ottenere l'ora corrente
 function getDate() {
     let DataAttuale = new Date();
 
     let giorno = DataAttuale.getDate();
-    let mese = DataAttuale.getMonth() + 1;
+    let mese = DataAttuale.getMonth() + 1; // mese parte da 0
     let anno = DataAttuale.getFullYear();
 
     let ora = DataAttuale.getHours();
@@ -278,6 +304,7 @@ function getDate() {
     let orarioContainer = document.getElementById("orario-data");
     let calendarioContainer = document.getElementById("calendario-data");
 
+    // se l'ora/minuti è meno di 10, allora si aggiunge uno 0 prima
     if (ora < 10 && minuti < 10) {
         orarioContainer.innerHTML = "0" + ora + ":" + "0" + minuti;
     } else
@@ -290,6 +317,7 @@ function getDate() {
         orarioContainer.innerHTML = ora + ":" + minuti;
     }
 
+    // se il giorno/mese è meno di 10, allora si aggiunge uno 0 prima
     if (giorno < 10 && mese < 10) {
         calendarioContainer.innerHTML = "0" + giorno + "/" + "0" + mese + "/" + anno;
     } else
@@ -304,11 +332,13 @@ function getDate() {
 
     document.getElementById('sistema-data').title = orarioContainer.innerHTML + "  " + calendarioContainer.innerHTML;
 
+    // ogni minuto si aggiunge l'ora 
+    // 1000 = 1 secondo... 1000 * 60 = 60000... 60000 = 1 minuto
     setTimeout(function() {
         getDate();
     }, 60000); // 60 secondi
-
 }
 
+// le funzione chiamate sono inizializzate in queste funzioni
 dragSelectorLogic();
 getDate();
