@@ -85,7 +85,7 @@
                     <div class="app-icon"><img src="./images/ms-file-explorer.ico" alt="file Explorer icon by microsoft"><span>Esplora File</span></div>
                 </div>
             </div>
-            <!-- la parte ci sono le cartelle -->
+            <!-- la parte dove ci sono le CARTELLE -->
             <div id="article-div">
                 <div class="app-container-header">
                     <span>Articoli consigliati</span>
@@ -212,7 +212,29 @@
         <video autoplay muted id="myVideo">
             <source src="./images/video-1dark.mp4" type="video/mp4">
         </video>
-        <section id="not-mobile-friendly">Dispositivo NON Sopportato.</section>
+        <section id="not-mobile-friendly">
+            <div id="titolo-errore">
+                Dispositivo NON Sopportato.
+            </div>
+
+            <div>
+                <span>Apri da PC a Schermo Intero "<em><kbd>F11</kbd></em>"</span>,
+                <span>oppure usa "<em><kbd>CTRL</kbd> <kbd>-</kbd></em>" per zoom out</span>
+
+            </div>
+            <div id="dettagli-errore">
+                <!-- errore in width -->
+                <div id="width-errore">
+                    <span id="width-spiegazione">width: small</span>
+                    <span id="width-attuale">undefined.</span>
+                </div>
+                <!-- errore in height -->
+                <div id="height-errore">
+                    <span id="height-spiegazione">height: small</span>
+                    <span id="height-attuale">undefined.</span>
+                </div>
+            </div>
+        </section>
         <section id="spegni-section" class="">
             <div>
                 <div style="--i: 1;"></div>

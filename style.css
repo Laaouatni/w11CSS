@@ -297,11 +297,15 @@ label input {
     display: none;
     place-content: center;
     color: white;
-    font-size: 6vw;
     height: 100vh;
     width: 100vw;
     z-index: 999;
     backdrop-filter: blur(2em);
+    gap: 1em;
+}
+
+#not-mobile-friendly #titolo-errore {
+    font-size: 6vw;
     text-decoration: underline;
     text-underline-offset: 0.3em;
     font-weight: bolder;

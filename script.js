@@ -228,9 +228,11 @@ function dragSelectorLogic() {
             else if (e1.target.closest("#notification-section") != notifContainer && notifContainer.classList.contains("notification-on") && e1.target.closest("nav") != nav) {
                 notifContainer.classList.remove("notification-on");
                 dragSelectorCode();
-            } else if (e1.target.closest("#w11-start-section") == startContainer || e1.target.closest("#notification-section") == notifContainer || e1.target.closest("#widget-section") == widgetContainer) {
+            } // se si usa il Drag dentro START, WIDGET o NOTIFICHE, allora la funzione NON è attiva.
+            else if (e1.target.closest("#w11-start-section") == startContainer || e1.target.closest("#notification-section") == notifContainer || e1.target.closest("#widget-section") == widgetContainer) {
                 console.log("You can't drag the tab here!");
-            } else {
+            } // altrimenti, la funzione è attiva
+            else {
                 dragSelectorCode();
             }
         }
@@ -345,3 +347,44 @@ function getDate() {
 // le funzione chiamate sono inizializzate in queste funzioni
 dragSelectorLogic();
 getDate();
+
+
+function DispositivoNonSupportato() {
+    let AttualeWidthContainer = document.getElementById("width-attuale");
+    let AttualeHeightContainer = document.getElementById("height-attuale");
+
+    let widthSpiegazione = document.getElementById("width-spiegazione");
+    let heightSpiegazione = document.getElementById("height-spiegazione");
+
+    checkSopporto();
+
+    window.addEventListener("resize", function() {
+        checkSopporto();
+    });
+
+    function checkSopporto() {
+        // se la larghezza è inferiore a 800px, allora si mostra la spiegazione
+        if (window.innerWidth < 800) {
+            widthSpiegazione.innerHTML = "ERRORE LARGHEZZA: ti serve <b>800px</b>" + "   " + "per visualizzare questa pagina";
+            AttualeWidthContainer.innerHTML = window.innerWidth + "px";
+            widthSpiegazione.style.color = "rgb(255, 0, 47)";
+        } else {
+            widthSpiegazione.innerHTML = "Larghezza del tuo Schermo Giusta!";
+            AttualeWidthContainer.innerHTML = "";
+            widthSpiegazione.style.color = "rgb(0, 255, 157)";
+        }
+
+        // se l'altezza è inferiore a 600px, allora si mostra la spiegazione
+        if (window.innerHeight < 600) {
+            heightSpiegazione.innerHTML = "ERRORE ALTEZZA: ti serve <b>600px</b>" + "   " + "per visualizzare questa pagina";
+            AttualeHeightContainer.innerHTML = window.innerHeight + "px";
+            heightSpiegazione.style.color = "rgb(255, 0, 47)";
+        } else {
+            heightSpiegazione.innerHTML = "Altezza del tuo Schermo Giusta!";
+            AttualeHeightContainer.innerHTML = "";
+            heightSpiegazione.style.color = "rgb(0, 255, 157)";
+        }
+    }
+}
+
+DispositivoNonSupportato();
