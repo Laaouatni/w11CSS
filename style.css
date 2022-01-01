@@ -311,6 +311,10 @@ label input {
     font-weight: bolder;
 }
 
+#dettagli-errore {
+    font-size: 2.5vw;
+}
+
 #article-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
