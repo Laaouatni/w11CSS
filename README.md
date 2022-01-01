@@ -1,7 +1,6 @@
+# Windows 11 Clone
 
-# Windows-11-Clone
-
-## online website
+## online website (w11 clone)
 https://laaouatni.github.io/w11-clone/
 
 ### User Interface
