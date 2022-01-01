@@ -205,13 +205,13 @@ function dragSelectorLogic() {
             console.log("yessss risolto il bug!!!")
         } else {
             if (e1.target.closest("#w11-start-section") != startContainer && startContainer.classList.contains("on-visible-start")) {
-                startContainer.classList.toggle("on-visible-start");
+                startContainer.classList.remove("on-visible-start");
                 dragSelectorCode();
             } else if (e1.target.closest("#widget-section") != widgetContainer && widgetContainer.classList.contains("on-visible-widget")) {
-                widgetContainer.classList.toggle("on-visible-widget");
+                widgetContainer.classList.remove("on-visible-widget");
                 dragSelectorCode();
             } else if (e1.target.closest("#notification-section") != notifContainer && notifContainer.classList.contains("notification-on")) {
-                notifContainer.classList.toggle("notification-on");
+                notifContainer.classList.remove("notification-on");
                 dragSelectorCode();
             } else {
                 dragSelectorCode();
