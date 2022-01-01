@@ -265,9 +265,6 @@ function dragSelectorLogic() {
     });
 }
 
-dragSelectorLogic();
-
-
 function getDate() {
     let DataAttuale = new Date();
 
@@ -305,9 +302,13 @@ function getDate() {
         calendarioContainer.innerHTML = giorno + "/" + mese + "/" + anno;
     }
 
+    document.getElementById('sistema-data').title = orarioContainer.innerHTML + "  " + calendarioContainer.innerHTML;
+
     setTimeout(function() {
         getDate();
     }, 1000);
 
 }
+
+dragSelectorLogic();
 getDate();
