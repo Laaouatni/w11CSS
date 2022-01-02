@@ -39,6 +39,8 @@
       - [RIGHT snap](#right-snap)
         - [static image](#static-image-of-right-snap-functionality)
       - [FULL_SCREEN snap](#all_screen-snap)
+        - [static image](#static-image-of-full_screen-snap-functionality)
+        - [gif animation ](#animated-gif-of-full_screen-snap-functionality)
     - [if window minimized, the icon is in NavBar (all this is centered automatically)](#if-window-minimized-the-icon-is-in-navbar-all-this-is-centered-automatically)
     - [on mouse_move, it will create a dinamic selection drag](#on-mouse_move-it-will-create-a-dinamic-selection-drag)
 
