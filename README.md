@@ -3,8 +3,12 @@
 ## online website (w11 clone)
 https://laaouatni.github.io/w11-clone/
 
+-----
+
 ### User Interface
 ![windows 11 interfaccia clone](https://user-images.githubusercontent.com/87947051/145460305-997d42b9-3b7d-49e9-8da3-1d4e15563b66.png)
+
+-----
 
 ### Start Menu (with Animations)
 ###### static image of START menu (windows 11)
@@ -12,12 +16,15 @@ https://laaouatni.github.io/w11-clone/
 ###### gif of the animation on START menu (Windows 11)
 ![windows 11 start menu animation](https://user-images.githubusercontent.com/87947051/147880209-195156a0-69bb-4538-a2f7-e10e59fc889e.gif)
 
+-----
+
 ### Widget TaskBar Section of windows 11
 ###### static image of WIDGET section when is Active (windows 11)
 ![windows 11 widget section clone](https://user-images.githubusercontent.com/87947051/145460294-80e07f69-d55b-4ee9-8de9-ca66641beefe.png)
 ###### gif of the animation on WIDGET section (Windows 11)
 ![Widget windows 11 animation](https://user-images.githubusercontent.com/87947051/147880802-da349f95-08bb-4814-b746-d54262802287.gif)
 
+-----
 
 ### create new windows tab on click of any icon
 ###### static image of new tab when generated (Windows 11)
@@ -26,8 +33,19 @@ https://laaouatni.github.io/w11-clone/
 ![windows tab window generated, windows 11 dark animation](https://user-images.githubusercontent.com/87947051/147881150-93a6c02e-0eec-4ba6-a96f-bd3240a269ce.gif)
 
 
+-----
+
 ### movable and resizable tab window
+###### static image of movable and resizable tab window (Windows 11)
 ![windows 11 tab movement and rezible clone](https://user-images.githubusercontent.com/87947051/145460285-5bf51d47-5bd0-4576-83b0-ff434527104e.png)
+#### gif with animation of this functionality
+###### movable window functionality (onmousemove)
+![movable window in windows 11 clone html css javascript](https://user-images.githubusercontent.com/87947051/147881528-a46aa162-f011-4d6b-b291-606ee7b52274.gif)
+
+
+
+
+-----
 
 ### windows 11 snap functionality
 #### **left** snap
