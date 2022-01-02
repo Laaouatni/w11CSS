@@ -30,3 +30,7 @@ https://laaouatni.github.io/w11-clone/
 
 ### if window minimized, the icon is in NavBar (all this is centered automatically)
 ![navbar windows 11 html css clone](https://user-images.githubusercontent.com/87947051/145670732-259b9747-22e0-45e9-9c8e-b534341875fd.png)
+
+### on mouse_move, it will create a dinamic selection drag
+![selection drag windows 11 clone](https://user-images.githubusercontent.com/87947051/147878194-a7d1806e-caed-4633-875d-273df00374d9.gif)
+
