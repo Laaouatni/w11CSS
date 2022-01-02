@@ -118,7 +118,13 @@
 
 #### **all_screen** snap
 
+###### static image of FULL_SCREEN snap functionality
 ![all height tab windows 11 clone](https://user-images.githubusercontent.com/87947051/145670904-df8eb745-e670-4a82-b04d-1980ec501bbc.png)
+
+###### animated gif of FULL_SCREEN snap functionality
+![full screen window tab in windows 11](https://user-images.githubusercontent.com/87947051/147883682-420d7882-03d9-4ded-9054-1949a78113d5.gif)
+
+-----
 
 ### if window minimized, the icon is in NavBar (all this is centered automatically)
 
