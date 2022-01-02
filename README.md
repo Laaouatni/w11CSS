@@ -12,6 +12,37 @@
 
 -----
 
+## table of contents
+
+- [Windows 11 Clone](#windows-11-clone)
+  - [online website (w11 clone)](#online-website-w11-clone)
+    - [User Interface](#user-interface)
+  - [table of contents](#table-of-contents)
+    - [Start Menu (with Animations)](#start-menu-with-animations)
+          - [static image of START menu (windows 11)](#static-image-of-start-menu-windows-11)
+          - [gif of the animation on START menu (Windows 11)](#gif-of-the-animation-on-start-menu-windows-11)
+    - [Widget TaskBar Section of windows 11](#widget-taskbar-section-of-windows-11)
+          - [static image of WIDGET section when is Active (windows 11)](#static-image-of-widget-section-when-is-active-windows-11)
+          - [gif of the animation on WIDGET section (Windows 11)](#gif-of-the-animation-on-widget-section-windows-11)
+    - [create new windows tab on click of any icon](#create-new-windows-tab-on-click-of-any-icon)
+          - [static image of new tab when generated (Windows 11)](#static-image-of-new-tab-when-generated-windows-11)
+          - [gif of the animation of new tab when generated (Windows 11)](#gif-of-the-animation-of-new-tab-when-generated-windows-11)
+    - [movable and resizable tab window](#movable-and-resizable-tab-window)
+          - [static image of movable and resizable tab window (Windows 11)](#static-image-of-movable-and-resizable-tab-window-windows-11)
+      - [gif with animation of this functionality](#gif-with-animation-of-this-functionality)
+          - [movable window functionality (onmousemove)](#movable-window-functionality-onmousemove)
+          - [RESIZE window functionality (without using Javascript)](#resize-window-functionality-without-using-javascript)
+    - [windows 11 snap functionality](#windows-11-snap-functionality)
+      - [**left** snap](#left-snap)
+          - [static image of LEFT SNAP functionality](#static-image-of-left-snap-functionality)
+          - [animated gif of LEFT SNAP functionality](#animated-gif-of-left-snap-functionality)
+      - [**right** snap](#right-snap)
+          - [static image of RIGHT SNAP functionality](#static-image-of-right-snap-functionality)
+      - [**all_screen** snap](#all_screen-snap)
+    - [if window minimized, the icon is in NavBar (all this is centered automatically)](#if-window-minimized-the-icon-is-in-navbar-all-this-is-centered-automatically)
+    - [on mouse_move, it will create a dinamic selection drag](#on-mouse_move-it-will-create-a-dinamic-selection-drag)
+
+-----
 ### Start Menu (with Animations)
 
 ###### static image of START menu (windows 11)
