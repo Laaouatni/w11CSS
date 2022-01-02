@@ -42,6 +42,8 @@
         - [static image](#static-image-of-full_screen-snap-functionality)
         - [gif animation ](#animated-gif-of-full_screen-snap-functionality)
     - [if window minimized, the icon is in NavBar (all this is centered automatically)](#if-window-minimized-the-icon-is-in-navbar-all-this-is-centered-automatically)
+      - [static image](#static-image)
+      - [gif animation](#gif-animation)
     - [on mouse_move, it will create a dinamic selection drag](#on-mouse_move-it-will-create-a-dinamic-selection-drag)
 
 -----
@@ -130,8 +132,13 @@
 
 ### if window minimized, the icon is in NavBar (all this is centered automatically)
 
+###### static image
 ![navbar windows 11 html css clone](https://user-images.githubusercontent.com/87947051/145670732-259b9747-22e0-45e9-9c8e-b534341875fd.png)
+
+###### animated gif
+![gif navbar minimized icons](https://user-images.githubusercontent.com/87947051/147884263-2fc03350-ea53-487e-87b1-4c203ad335ad.gif)
 
 ### on mouse_move, it will create a dinamic selection drag
 
 ![selection drag windows 11 clone](https://user-images.githubusercontent.com/87947051/147878194-a7d1806e-caed-4633-875d-273df00374d9.gif)
+
