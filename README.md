@@ -40,9 +40,9 @@ https://laaouatni.github.io/w11-clone/
 ![windows 11 tab movement and rezible clone](https://user-images.githubusercontent.com/87947051/145460285-5bf51d47-5bd0-4576-83b0-ff434527104e.png)
 #### gif with animation of this functionality
 ###### movable window functionality (onmousemove)
-![movable window in windows 11 clone html css javascript](https://user-images.githubusercontent.com/87947051/147881528-a46aa162-f011-4d6b-b291-606ee7b52274.gif)
-
-
+![movable window in windows 11 clone html css javascript animation](https://user-images.githubusercontent.com/87947051/147881528-a46aa162-f011-4d6b-b291-606ee7b52274.gif)
+###### RESIZE window functionality (without using Javascript)
+![resize window in windows 11 clone animation](https://user-images.githubusercontent.com/87947051/147881807-422861ed-1cd0-441b-83f5-ca8d0ac9ccc6.gif)
 
 
 -----
