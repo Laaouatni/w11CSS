@@ -44,14 +44,17 @@ https://laaouatni.github.io/w11-clone/
 ###### RESIZE window functionality (without using Javascript)
 ![resize window in windows 11 clone animation](https://user-images.githubusercontent.com/87947051/147881807-422861ed-1cd0-441b-83f5-ca8d0ac9ccc6.gif)
 
-
 -----
 
 ### windows 11 snap functionality
 #### **left** snap
+###### static image of LEFT SNAP functionality
 ![windows 11 clone tab, can fit all right or left space](https://user-images.githubusercontent.com/87947051/145460277-a0fcf6a4-1b42-4745-8a30-11f3f7ad5547.png)
+###### animated gif of LEFT SNAP functionality
+![left snap animation windows 11](https://user-images.githubusercontent.com/87947051/147882279-8209b89f-b08b-4bfd-8367-0e2b222e45c3.gif)
 
 #### **right** snap
+###### static image of RIGHT SNAP functionality
 ![Immagine 2021-12-11 123206](https://user-images.githubusercontent.com/87947051/145674918-8fd6a583-0f7f-4fd3-baee-0ffebfbfef81.png)
 
 #### **all_screen** snap
