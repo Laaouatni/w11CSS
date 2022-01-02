@@ -7,7 +7,10 @@ https://laaouatni.github.io/w11-clone/
 ![windows 11 interfaccia clone](https://user-images.githubusercontent.com/87947051/145460305-997d42b9-3b7d-49e9-8da3-1d4e15563b66.png)
 
 ### Start Menu (with Animations)
+##### static image of START menu (windows 11)
 ![windows 11 start section clone](https://user-images.githubusercontent.com/87947051/145460298-84d0d60b-c15e-4639-9525-a0e2dd5ddf51.png)
+##### gif of the animation on START menu
+![windows 11 start menu animation](https://user-images.githubusercontent.com/87947051/147880209-195156a0-69bb-4538-a2f7-e10e59fc889e.gif)
 
 ### Widget TaskBar Section of windows 11
 ![windows 11 widget section clone](https://user-images.githubusercontent.com/87947051/145460294-80e07f69-d55b-4ee9-8de9-ca66641beefe.png)
