@@ -18,7 +18,7 @@
   - [LINK website](#online-website-w11-clone)
 - [Image of Windows 11 Clone](#user-interface)
   - [table of contents](#table-of-contents)
-    - [on mouse_move, it will create a dinamic selection drag](#on-mouse_move-it-will-create-a-dinamic-selection-drag)
+    - [on mouse_move, it will create a dinamic selection drag](#new-feature-on-mouse_move-it-will-create-a-dinamic-selection-drag)
     - [START MENU](#start-menu-with-animations)
       - [static image](#static-image-of-start-menu-windows-11)
       - [gif animation](#gif-of-the-animation-on-start-menu-windows-11)
