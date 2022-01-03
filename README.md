@@ -18,6 +18,7 @@
   - [LINK website](#online-website-w11-clone)
 - [Image of Windows 11 Clone](#user-interface)
   - [table of contents](#table-of-contents)
+    - [on mouse_move, it will create a dinamic selection drag](#on-mouse_move-it-will-create-a-dinamic-selection-drag)
     - [START MENU](#start-menu-with-animations)
       - [static image](#static-image-of-start-menu-windows-11)
       - [gif animation](#gif-of-the-animation-on-start-menu-windows-11)
@@ -44,9 +45,11 @@
     - [if window minimized, the icon is in NavBar (all this is centered automatically)](#if-window-minimized-the-icon-is-in-navbar-all-this-is-centered-automatically)
       - [static image](#static-image)
       - [gif animation](#gif-animation)
-    - [on mouse_move, it will create a dinamic selection drag](#on-mouse_move-it-will-create-a-dinamic-selection-drag)
 
 -----
+
+### ✅NEW FEATURE: on mouse_move, it will create a dinamic selection drag
+![selection drag windows 11 clone](https://user-images.githubusercontent.com/87947051/147878194-a7d1806e-caed-4633-875d-273df00374d9.gif)
 
 ### Start Menu (with Animations)
 
@@ -137,8 +140,4 @@
 
 ###### animated gif
 ![gif navbar minimized icons](https://user-images.githubusercontent.com/87947051/147884263-2fc03350-ea53-487e-87b1-4c203ad335ad.gif)
-
-### on mouse_move, it will create a dinamic selection drag
-
-![selection drag windows 11 clone](https://user-images.githubusercontent.com/87947051/147878194-a7d1806e-caed-4633-875d-273df00374d9.gif)
 
