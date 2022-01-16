@@ -141,3 +141,9 @@
 ###### animated gif
 ![gif navbar minimized icons](https://user-images.githubusercontent.com/87947051/147884263-2fc03350-ea53-487e-87b1-4c203ad335ad.gif)
 
+
+-----
+
+![w11 views](https://visitor-badge.glitch.me/badge?page_id=w11-clone)
+
+views count started from 16 january, but the project is uploaded on december.
