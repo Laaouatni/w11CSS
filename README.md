@@ -1,6 +1,6 @@
-# Windows 11 Clone
+# Windows 11 CSS
 
-### online website (w11 clone)
+### online website
 
 <https://laaouatni.github.io/w11-clone/>
 
