@@ -146,4 +146,4 @@
 
 ![w11 views](https://visitor-badge.glitch.me/badge?page_id=w11CSS)
 
-views count started from 16 january, but the project is uploaded on december.
+views count started from 3 February, but the project is uploaded on december.
