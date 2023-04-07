@@ -1,5 +1,13 @@
 # Windows 11 CSS
 
+> thanks for the ⭐ stars... 
+> <br> the code isn't the best, I know but unfortunately, 
+> 
+> I won't edit this repo, to keep it simple for junior devs (like I was 2 years ago) 
+> <br> because if is starred a lot I think is good as it is.
+>
+> sorry *(you can change it if you want to, to make it even better 😉)*
+
 ### online website
 
 <a href="https://w11-clone.vercel.app">w11-clone.vercel.app</a>
