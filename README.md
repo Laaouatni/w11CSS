@@ -6,7 +6,7 @@
 > I won't edit this repo, to keep it simple for junior devs (like I was 2 years ago) 
 > <br> because if is starred a lot I think is good as it is.
 >
-> sorry *(you can change it if you want to, to make it even better 😉)*
+> sorry *(you can change it if you want to, to make it even better)*
 
 ### online website
 
