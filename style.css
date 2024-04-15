@@ -34,7 +34,7 @@ body {
 }
 
 nav {
-    background: linear-gradient(rgba(0, 0, 85, 0.075), transparent, rgba(0, 0, 85, 0.192));
+    background: linear-gradient(rgba(0, 0, 85, 0.075), transparent, rgba(0, 0, 85, 0.192)), rgba(32, 32, 32, .50);
     height: var(--nav-height);
     width: var(--max-width);
     position: fixed;
@@ -42,6 +42,7 @@ nav {
     z-index: 1;
     box-shadow: 0 0 1em rgba(0, 0, 255, 0.027);
     backdrop-filter: blur(5em);
+    border-top: 1px solid rgba(255, 255, 255, 0.075);
 }
 
 nav #nav-container {
